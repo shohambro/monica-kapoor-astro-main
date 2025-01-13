@@ -1,47 +1,46 @@
-
-"use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import Numerology from "../../public/images/Numerology.jpg";
+import Scroll1 from "../../public/images/Scroll1.jpg";
+import Scroll2 from "../../public/images/Scroll2.jpg";
+import Scroll3 from "../../public/images/Scroll3.jpg";
 
-const musicSchoolContent = [
-    {
-      title: 'Discover Your Sound with Us: A Personal Journey in Music Mastery',
-      description:
-        'Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.',
-    },
-    {
-      title: 'Discover Your Sound with Us: A Personal Journey in Music Mastery',
-      description:
-        'Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.',
-    },
-    {
-      title: 'Discover Your Sound with Us: A Personal Journey in Music Mastery',
-      description:
-        'Embark on a musical journey that’s uniquely yours. Our personalized instruction adapts to your individual needs, setting the stage for unparalleled growth and creativity. At our music school, your aspirations meet our dedicated support, creating a harmonious path to mastery.',
-    },
-    {
-      title: 'Live Feedback & Engagement',
-      description:
-        'Immerse yourself in an interactive learning experience where feedback is immediate, just like real-time changes in a collaborative project. This approach enhances your understanding and mastery of music concepts and performance techniques.',
-    },
-    {
-      title: 'Cutting-Edge Curriculum',
-      description:
-        'Our curriculum is continuously updated to include the latest music education trends and technologies, ensuring you’re always learning with the most current and effective methods. Say goodbye to outdated materials and welcome an education that evolves with the industry.',
-    },
-    {
-      title: 'Limitless Learning Opportunities',
-      description:
-        'With our expansive resource library and dynamic course offerings, you’ll never find yourself without something new to explore. Our platform provides continuous opportunities for growth, ensuring your musical skills are always advancing.',
-    },
-  ];
+const astrologyContent = [
+  {
+    title: "Why Numerology Matters: Unlocking the Secrets of Your Life Path",
+    description:
+      "Numerology provides profound insights into your personality, life challenges, and destiny. Monica Kapoor's expertise in numerology helps you decode the numbers that influence your life, offering clarity and direction like never before.",
+  },
+  {
+    title: "High-Quality Astrological Products",
+    description:
+      "From carefully crafted yantras to powerful mantras, Monica Kapoor offers a range of authentic astrological tools designed to enhance your spiritual well-being.",
+  },
+  {
+    title: "Best-in-Class Yantras and Mantras",
+    description:
+      "Empower your spiritual journey with meticulously energized yantras and personalized mantras.",
+  },
+  {
+    title: "Accurate Predictions and Guidance",
+    description:
+      "Monica Kapoor delivers precise astrological predictions and actionable guidance.",
+  },
+];
+
+const astrologyImages = [
+  "/images/Numerology.jpg",
+  "/images/Scroll1.jpg",
+  "/images/Scroll2.jpg", 
+  "/images/Scroll3.jpg",
+];
 
 function WhyChooseUs() {
   return (
     <div>
-        <StickyScroll content={musicSchoolContent} />
+      <StickyScroll content={astrologyContent} images={astrologyImages} />
     </div>
-  )
+  );
 }
 
-export default WhyChooseUs
+export default WhyChooseUs;

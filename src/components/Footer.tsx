@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="py-12 bg-gradient-to-br from-yellow-400 to-orange-500 text-[#6a1818]">
+    <footer className="py-12 bg-white text-[#6a1818]">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Me Section */}
@@ -98,8 +98,8 @@ function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 text-center bg-white border-t border-neutral-300 pt-6">
-          <p className="text-sm">
+        <div className="mt-4 mb-4 text-center bg-white border-t border-neutral-300 pt-6">
+          <p className="text-lg">
             © {new Date().getFullYear()} Monica Kapoor. All rights reserved.
           </p>
         </div>

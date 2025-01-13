@@ -8,6 +8,8 @@ import GuruJi from "../../public/images/GuruJiPic.jpg";
 import Numerology from "../../public/images/Numerology.jpg";
 import Tarot from "../../public/images/Tarot.jpg";
 import Psychic from "../../public/images/Psychic.jpg";
+import Link from 'next/link';
+// import { url } from 'inspector';
 
 function page() {
   const services = [
@@ -15,19 +17,23 @@ function page() {
       title: 'Stones',
       description: 'Unlock the mysteries of numbers and their influence on your life with our expert numerology service.',
       image: '/images/Numerology.jpg', // Replace with your image path
+      link: '/products/stones'
     },
     {
       title: 'Bracelets',
       description: 'Discover insights into your past, present, and future with our personalized tarot readings.',
       image: '/images/Tarot.jpg', // Replace with your image path
+      link: '/products/bracelets'
     },
     {
       title: 'Yantras',
       description: 'Gain clarity and guidance from our experienced psychics to navigate life’s challenges.',
       image: '/images/Psychic.jpg', // Replace with your image path
+      link: '/products/yantras'
     },
   ];
 
+ 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
       <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
@@ -53,8 +59,8 @@ function page() {
               <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm">
                 {service.description}
               </p>
-              <button className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
-                View All
+              <button  className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
+                <Link href={service.link}>View more</Link>
               </button>
             </div>
           </div>

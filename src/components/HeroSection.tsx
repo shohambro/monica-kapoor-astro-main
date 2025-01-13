@@ -49,9 +49,10 @@ function HeroSection() {
           Monica Kapoor
         </h1>
         <p className="mt-8 font-normal text-center text-nowrap text-base md:text-lg text-[white] max-w-lg">
-        Tarot | Numerology | Psychic Expert | Emotional Psychology Expert | Life Coach
+          Tarot | Numerology | Psychic Expert | Emotional Psychology Expert |
+          Life Coach
         </p>
-        <p className="mt-8 font-normal text-center text-nowrap text-base md:text-lg text-[white] max-w-lg">
+        <p className="mt-4 font-normal text-center text-nowrap text-base md:text-sm text-[white] max-w-lg">
           Monica Kapoor is a life coach specializing in Tarot Reading,
           Numerology, and spiritual guidance.
           <br /> With deep intuitive insights and profound spiritual knowledge,
@@ -61,10 +62,18 @@ function HeroSection() {
           <br /> Her compassionate approach inspires confidence and motivation
           for a brighter, abundant future.
         </p>
-        <div className="mt-8">
-          <Link href={"/courses"}>
+        <p className="mt-4 font-normal text-center text-nowrap text-base md:text-sm text-[white] max-w-lg">
+          Book a transformation session with Monica Kapoor and begin your
+          journey with an empty jar.
+          <br />
+          Fill it with divine guidance and positive moments,
+          and watch as life unfolds into the amazing miracles you have always
+          dreamed of.
+        </p>
+        <div className="mt-6">
+          <Link href={"/about"}>
             <button className="text-sm w-auto px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
-              Your Journey Starts Here
+              About Me
             </button>
           </Link>
         </div>

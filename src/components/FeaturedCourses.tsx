@@ -4,10 +4,10 @@ import { BackgroundGradient } from "./ui/background-gradient";
 
 function FeaturedCourses() {
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12  bg-gradient-to-br from-yellow-400 to-orange-500">
       <div>
         <div className="text-center">
-          <h2 className="text-base text-green-300 font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
             JAI GURU JI
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-[#6a1818] sm:text-4xl">
@@ -18,7 +18,7 @@ function FeaturedCourses() {
       <div className="mt-10 mx-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center h-auto">
           {/* Service Card */}
-          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-[#f7b335] overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-white overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
             <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
               <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-[#6a1818]">
                 Numerology
@@ -30,7 +30,7 @@ function FeaturedCourses() {
           </div>
 
           {/* Service Card */}
-          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-[#f7b335] overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-white overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
             <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
               <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-[#6a1818]">
                 Tarot Reading
@@ -42,7 +42,7 @@ function FeaturedCourses() {
           </div>
 
           {/* Service Card */}
-          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-[#f7b335] overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
+          <div className="flex flex-col rounded-[22px] border border-[#6a1818] bg-white dark:bg-white overflow-hidden h-full max-w-sm hover:scale-105 transition-transform duration-300">
             <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
               <p className="text-lg sm:text-xl text-black mt-4 mb-2 dark:text-[#6a1818]">
                 Psychic Reading
@@ -57,7 +57,7 @@ function FeaturedCourses() {
       <div className="mt-20 text-center">
         <Link
           href={"/courses"}
-          className="px-4 py-2 border  bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300"
+          className="px-4 py-2 border bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300"
         >
           Book A Service
         </Link>
