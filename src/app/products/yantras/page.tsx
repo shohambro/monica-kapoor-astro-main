@@ -4,7 +4,14 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Modal from '../../../components/Modal'; // Adjust the import path as needed
 
-const yantras = [
+// Define the type for a Yantra
+interface Yantra {
+  title: string;
+  image: string;
+  description: string;
+}
+
+const yantras: Yantra[] = [
   { title: 'Vyapar Vriddhi Yantra', image: '/images/VyaparVriddhi.jpg', description: 'Enhances business growth and financial prosperity.' },
   { title: 'Lakshmi Ganesha Yantra', image: '/images/LakshmiGanesha.jpg', description: 'Invokes the blessings of Goddess Lakshmi and Lord Ganesha for wealth and wisdom.' },
   { title: 'Kubera Yantra', image: '/images/Kubera.jpg', description: 'Attracts wealth and financial stability with the blessings of Lord Kubera.' },
@@ -24,10 +31,10 @@ const yantras = [
 ];
 
 const Yantras = () => {
-  const [selectedYantra, setSelectedYantra] = useState(null);
+  const [selectedYantra, setSelectedYantra] = useState<Yantra | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (yantra) => {
+  const openModal = (yantra: Yantra) => {
     setSelectedYantra(yantra);
     setIsModalOpen(true);
   };
@@ -38,12 +45,14 @@ const Yantras = () => {
   };
 
   const handleAddToCart = () => {
-    alert(`${selectedYantra?.title} has been added to your cart.`);
+    if (selectedYantra) {
+      alert(`${selectedYantra.title} has been added to your cart.`);
+    }
     closeModal();
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36 ">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
       <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
         Yantras
       </h1>
@@ -61,7 +70,7 @@ const Yantras = () => {
               className="w-full h-48 object-cover rounded-md"
             />
             <div className="p-6">
-              <h2 className="text-xl text-nowrap font-bold text-gray-800 dark:text-white mb-4">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
                 {yantra.title}
               </h2>
               <button
