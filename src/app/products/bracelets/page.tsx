@@ -4,7 +4,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Modal from '../../../components/Modal';
 
-const bracelets = [
+interface Bracelet {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const bracelets: Bracelet[] = [
   {
     title: 'Amethyst Bracelet',
     description: 'A stunning purple quartz crystal, known as the stone of clarity, symbolizing purification, inspiration, and protection.',
@@ -108,10 +114,10 @@ const bracelets = [
 ];
 
 const Bracelets = () => {
-  const [selectedBracelet, setSelectedBracelet] = useState(null);
+  const [selectedBracelet, setSelectedBracelet] = useState<Bracelet | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (bracelet: any) => {
+  const openModal = (bracelet: Bracelet) => {
     setSelectedBracelet(bracelet);
     setIsModalOpen(true);
   };
@@ -122,7 +128,9 @@ const Bracelets = () => {
   };
 
   const handleAddToCart = () => {
-    alert(`${selectedBracelet?.title} has been added to your cart.`);
+    if (selectedBracelet) {
+      alert(`${selectedBracelet.title} has been added to your cart.`);
+    }
     closeModal();
   };
 
@@ -145,7 +153,7 @@ const Bracelets = () => {
               className="w-full h-48 object-cover rounded-md"
             />
             <div className="p-6">
-              <h2 className="text-xl text-nowrap font-bold text-gray-800 dark:text-white mb-4">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
                 {bracelet.title}
               </h2>
               <button

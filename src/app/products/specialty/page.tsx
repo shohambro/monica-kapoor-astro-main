@@ -2,26 +2,36 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Modal from "../../../components/Modal"; // Update this path if Modal is in a different directory.
+import Modal from "../../../components/Modal";
 
-const specialties = [
+interface Specialty {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const specialties: Specialty[] = [
   {
     title: "Divine Rose Ittar",
-    description: "It is believed that the Divine Rose Ittar / Perfume will end financial problems. According to astrology, wear white clothes and offer rose perfume at any deity place. This can remove obstacles in your love marriage.",
+    description:
+      "It is believed that the Divine Rose Ittar / Perfume will end financial problems. According to astrology, wear white clothes and offer rose perfume at any deity place. This can remove obstacles in your love marriage.",
     image: "/images/RoseAttar.jpg",
   },
   {
     title: "Divine Chandan Ittar",
-    description: "Sandalwood helps balance the energy of the Moon. In Vedic astrology, the Moon influences our emotions and mind. Sandalwood is associated with the Moon and is known for bringing peace and emotional stability. Applying sandalwood perfume can calm your mind and reduce stress.",
+    description:
+      "Sandalwood helps balance the energy of the Moon. In Vedic astrology, the Moon influences our emotions and mind. Sandalwood is associated with the Moon and is known for bringing peace and emotional stability. Applying sandalwood perfume can calm your mind and reduce stress.",
     image: "/images/ChandanAttar.jpg",
   },
 ];
 
 const OurSpecialty = () => {
-  const [selectedSpecialty, setSelectedSpecialty] = useState(null);
+  const [selectedSpecialty, setSelectedSpecialty] = useState<Specialty | null>(
+    null
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (specialty: any) => {
+  const openModal = (specialty: Specialty) => {
     setSelectedSpecialty(specialty);
     setIsModalOpen(true);
   };
@@ -32,7 +42,9 @@ const OurSpecialty = () => {
   };
 
   const handleAddToCart = () => {
-    alert(`${selectedSpecialty?.title} has been added to your cart.`);
+    if (selectedSpecialty) {
+      alert(`${selectedSpecialty.title} has been added to your cart.`);
+    }
     closeModal();
   };
 
@@ -49,7 +61,7 @@ const OurSpecialty = () => {
           >
             <Image
               src={specialty.image}
-              alt={specialty.title}
+              alt={`Image of ${specialty.title}`}
               width={320}
               height={200}
               className="w-full h-64 object-cover rounded-md"

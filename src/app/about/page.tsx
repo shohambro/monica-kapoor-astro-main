@@ -39,10 +39,10 @@ function AboutPage() {
           MS. MONICA KAPOOR: YOUR GUIDE TO CLARITY, PURPOSE, AND TRANSFORMATION
         </h2>
         <p className="text-gray-600 dark:text-[#6a1818] text-lg leading-relaxed mb-6">
-          With over 24 years of enriching experience in the education sector in Delhi-NCR, Monica Ji has emerged as one of India's most sought-after experts in Tarot, Numerology, Psychic Guidance, Emotional Psychology, and Life Coaching. 
+          With over 24 years of enriching experience in the education sector in Delhi-NCR, Monica Ji has emerged as one of India&apos;s most sought-after experts in Tarot, Numerology, Psychic Guidance, Emotional Psychology, and Life Coaching. 
         </p>
         <p className="text-gray-600 dark:text-[#6a1818] text-lg leading-relaxed mb-6">
-          As a spiritual guide and trusted counselor, she has helped millions heal emotional trauma, unlock their true potential, and navigate life's challenges by blending spirituality with practical wisdom.
+          As a spiritual guide and trusted counselor, she has helped millions heal emotional trauma, unlock their true potential, and navigate lifeapos;s challenges by blending spirituality with practical wisdom.
         </p>
         <p className="text-gray-600 dark:text-[#6a1818] text-lg leading-relaxed mb-6">
           In this piece, Ms. Monica Kapoor delves into the subtle ways the universe communicates with us. From incorporating meditation into your daily routine to using astrology as a tool for better decision-making, she shares profound insights that can bring transformative change. Learn how to align your energy with your aspirations, tap into the power of your mind, and create harmony in the midst of chaos. Whether you are curious about spiritual practices or seeking actionable tools to live a more purposeful life, her guidance offers something for everyone.
@@ -54,7 +54,7 @@ function AboutPage() {
           <br />
           If you pay attention, you will find the divine everywhere—even in the brief pause between an inhale and exhale. 
           <br />
-          Think of Google as a metaphor for God—overflowing with answers, but only if you are willing to ask. Align your mind, and the universe will support you on your journey."
+          Think of Google as a metaphor for God—overflowing with answers, but only if you are willing to ask. Align your mind, and the universe will support you on your journey.&quot;
         </blockquote>
       </div>
     </div>
