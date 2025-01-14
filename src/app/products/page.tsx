@@ -60,7 +60,7 @@ function page() {
                 {service.description}
               </p>
               <button  className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
-                <Link href={service.link}>View more</Link>
+                <Link href={service.link}>View More</Link>
               </button>
             </div>
           </div>

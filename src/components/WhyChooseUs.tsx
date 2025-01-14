@@ -1,9 +1,9 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Numerology from "../../public/images/Numerology.jpg";
-import Scroll1 from "../../public/images/Scroll1.jpg";
+import YantraScroll1 from "../../public/images/YantraScroll1.jpg";
 import Scroll2 from "../../public/images/Scroll2.jpg";
-import Scroll3 from "../../public/images/Scroll3.jpg";
+import BraceletScroll1 from "../../public/images/BraceletScroll1.jpg";
 
 const astrologyContent = [
   {
@@ -24,14 +24,14 @@ const astrologyContent = [
   {
     title: "Accurate Predictions and Guidance",
     description:
-      "Monica Kapoor delivers precise astrological predictions and actionable guidance.",
+      "Monica Kapoor offers insightful astrological guidance and actionable advice. She possesses a profound understanding of astrology and provides practical counsel to help individuals navigate life's challenges and make informed decisions.",
   },
 ];
 
 const astrologyImages = [
   "/images/Numerology.jpg",
-  "/images/Scroll1.jpg",
-  "/images/Scroll2.jpg", 
+  "/images/BraceletScroll1.jpg",
+  "/images/YantraScroll1.jpg", 
   "/images/Scroll3.jpg",
 ];
 

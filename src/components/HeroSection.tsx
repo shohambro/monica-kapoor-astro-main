@@ -52,7 +52,7 @@ function HeroSection() {
           Tarot | Numerology | Psychic Expert | Emotional Psychology Expert |
           Life Coach
         </p>
-        <p className="mt-4 font-normal text-center text-nowrap text-base md:text-sm text-[white] max-w-lg">
+        <p className="mt-4 font-normal text-start text-nowrap text-base md:text-sm text-[white] max-w-lg">
           Monica Kapoor is a life coach specializing in Tarot Reading,
           Numerology, and spiritual guidance.
           <br /> With deep intuitive insights and profound spiritual knowledge,
@@ -62,12 +62,12 @@ function HeroSection() {
           <br /> Her compassionate approach inspires confidence and motivation
           for a brighter, abundant future.
         </p>
-        <p className="mt-4 font-normal text-center text-nowrap text-base md:text-sm text-[white] max-w-lg">
+        <p className="mt-4 font-normal text-start text-nowrap text-base md:text-sm text-[white] max-w-lg">
           Book a transformation session with Monica Kapoor and begin your
           journey with an empty jar.
           <br />
           Fill it with divine guidance and positive moments,
-          and watch as life unfolds into the amazing miracles you have always
+          and watch as life unfolds into the <br /> amazing miracles you have always
           dreamed of.
         </p>
         <div className="mt-6">

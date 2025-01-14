@@ -8,8 +8,8 @@ import Shorts2 from "../../public/images/Shorts2.jpg";
 function YouTubeVideos() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 flex flex-col items-center justify-center p-8 space-y-6">
-      <h2 className="text-4xl lg:text-6xl font-bold text-[#6a1818] text-center mb-8 mt-8">
-        Podcasts And Clips
+      <h2 className="text-4xl lg:text-5xl font-bold text-[#6a1818] text-center mb-8 mt-8">
+        Featured Podcasts And Clips
       </h2>
 
       {/* <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden mb-8">
@@ -135,7 +135,7 @@ function YouTubeVideos() {
           </div>
         </div>
       </div>
-      <button className="text-sm w-auto px-6 py-3 bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">View more</button>
+      <button className="text-sm w-auto px-6 py-3 border bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">View more</button>
     </div>
   );
 }

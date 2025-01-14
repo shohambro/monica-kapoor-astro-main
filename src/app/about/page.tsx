@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Scroll1 from "../../public/images/Scroll1.jpg";
-import Scroll2 from "../../public/images/Scroll2.jpg";
 
 function AboutPage() {
   return (
@@ -12,18 +10,28 @@ function AboutPage() {
         Monica Kapoor
       </h1>
       <div className="flex flex-wrap justify-center gap-8 px-4">
-        {/* Placeholder for Image 1 */}
-        <div className="w-80 h-80 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex items-center justify-center">
-          <p className="text-gray-400 dark:text-gray-600 font-semibold">
-            Image 1 Placeholder
-          </p>
+        {/* First Image */}
+        <div className="w-80 h-80 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+          <Image
+            src="/images/Scroll1.jpg"
+            alt="Scroll 1"
+            width={320}
+            height={320}
+            className="w-full h-full object-cover"
+            priority
+          />
         </div>
 
-        {/* Placeholder for Image 2 */}
-        <div className="w-80 h-80 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex items-center justify-center">
-          <p className="text-gray-400 dark:text-gray-600 font-semibold">
-            Image 2 Placeholder
-          </p>
+        {/* Second Image */}
+        <div className="w-80 h-80 bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+          <Image
+            src="/images/Scroll2.jpg"
+            alt="Scroll 2"
+            width={320}
+            height={320}
+            className="w-full h-full object-cover"
+            priority
+          />
         </div>
       </div>
       <div className="max-w-5xl mx-auto mt-12 bg-white dark:bg-white rounded-2xl shadow-lg p-8">
@@ -34,7 +42,7 @@ function AboutPage() {
           With over 24 years of enriching experience in the education sector in Delhi-NCR, Monica Ji has emerged as one of India's most sought-after experts in Tarot, Numerology, Psychic Guidance, Emotional Psychology, and Life Coaching. 
         </p>
         <p className="text-gray-600 dark:text-[#6a1818] text-lg leading-relaxed mb-6">
-          As a spiritual guide and trusted counselor, she has helped millions heal emotional trauma, unlock their true potential, and navigate life’s challenges by blending spirituality with practical wisdom.
+          As a spiritual guide and trusted counselor, she has helped millions heal emotional trauma, unlock their true potential, and navigate life's challenges by blending spirituality with practical wisdom.
         </p>
         <p className="text-gray-600 dark:text-[#6a1818] text-lg leading-relaxed mb-6">
           In this piece, Ms. Monica Kapoor delves into the subtle ways the universe communicates with us. From incorporating meditation into your daily routine to using astrology as a tool for better decision-making, she shares profound insights that can bring transformative change. Learn how to align your energy with your aspirations, tap into the power of your mind, and create harmony in the midst of chaos. Whether you are curious about spiritual practices or seeking actionable tools to live a more purposeful life, her guidance offers something for everyone.

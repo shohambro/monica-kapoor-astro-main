@@ -37,7 +37,7 @@ const musicSchoolTestimonials = [
 function MusicSchoolTestimonials() {
   return (
     <div className="h-[40rem] w-full bg-gradient-to-br from-yellow-400 to-orange-500 relative flex flex-col items-center justify-center overflow-hidden">
-      <h1 className="text-4xl lg:text-6xl text-[#6a1818] font-bold text-center mb-8 z-10">
+      <h1 className="text-4xl lg:text-5xl text-[#6a1818] font-bold text-center mb-8 z-10">
         Client Testimonials
       </h1>
       <div className="flex justify-center w-full overflow-hidden px-4 sm:px-6 lg:px-8">
