@@ -1,7 +1,4 @@
-# A music school project in NextJS
+# Monica Kapoor's Astrology Website
 
-## Description
-Seach "chai aur code" on youtube and watch it there
-
-## contributon
-No need to make any PR in this repo. Specially DO NOT touch the README.md file
+## Developed By
+Shoham Brojobasi
