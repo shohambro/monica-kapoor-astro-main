@@ -22,7 +22,7 @@ function page() {
       image: '/images/Psychic1.jpg', // Replace with your image path
     },
     {
-      title: 'Magic Spells',
+      title: 'Magic Spells / Pujas',
       description: 'Experience powerful rituals and transformative spells tailored to bring peace and prosperity into your life.',
       image: '/images/MagicSpells.jpg', // Replace with your image path
     },
@@ -55,7 +55,7 @@ function page() {
                   {service.description}
                 </p>
               </div>
-              <Link href="/contact">
+              <Link href="/appointments">
                 <button className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
                   Book Service @ 1455/-
                 </button>

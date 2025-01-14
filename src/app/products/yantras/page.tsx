@@ -5,23 +5,22 @@ import React, { useState } from 'react';
 import Modal from '../../../components/Modal'; // Adjust the import path as needed
 
 const yantras = [
-  { title: 'Vyapar Vriddhi Yantra', image: '/images/VyaparVriddhiYantra.jpg' },
-  { title: 'Lakshmi Ganesha Yantra', image: '/images/LakshmiGaneshaYantra.jpg' },
-  { title: 'Kubera Yantra', image: '/images/KuberaYantra.jpg' },
-  { title: 'Lakshmi Yantra', image: '/images/LakshmiYantra.jpg' },
-  { title: 'Kamala Yantra', image: '/images/KamalaYantra.jpg' },
-  { title: 'Shri Sukta Yantra', image: '/images/ShriSuktaYantra.jpg' },
-  { title: 'Chauntisa Yantra', image: '/images/ChauntisaYantra.jpg' },
-  { title: 'Ganesha Yantra', image: '/images/GaneshaYantra.jpg' },
-  { title: 'Kubera Yantra', image: '/images/KuberaYantra.jpg' },
-  { title: 'Shiva Yantra', image: '/images/ShivaYantra.jpg' },
-  { title: 'Rama Yantra', image: '/images/RamaYantra.jpg' },
-  { title: 'Hanuman Yantra', image: '/images/HanumanYantra.jpg' },
-  { title: 'Vishnu Yantra', image: '/images/VishnuYantra.jpg' },
-  { title: 'Krishna Yantra', image: '/images/KrishnaYantra.jpg' },
-  { title: 'Saraswati Yantra', image: '/images/SaraswatiYantra.jpg' },
-  { title: 'Dasha Mahavidya Yantra', image: '/images/DashaMahavidyaYantra.jpg' },
-  { title: 'Durga Yantra', image: '/images/DurgaYantra.jpg' },
+  { title: 'Vyapar Vriddhi Yantra', image: '/images/VyaparVriddhi.jpg', description: 'Enhances business growth and financial prosperity.' },
+  { title: 'Lakshmi Ganesha Yantra', image: '/images/LakshmiGanesha.jpg', description: 'Invokes the blessings of Goddess Lakshmi and Lord Ganesha for wealth and wisdom.' },
+  { title: 'Kubera Yantra', image: '/images/Kubera.jpg', description: 'Attracts wealth and financial stability with the blessings of Lord Kubera.' },
+  { title: 'Lakshmi Yantra', image: '/images/Lakshmi.jpg', description: 'Dedicated to Goddess Lakshmi, it brings prosperity and abundance.' },
+  { title: 'Kamala Yantra', image: '/images/Kamala.jpg', description: 'Removes obstacles and attracts divine blessings for spiritual growth.' },
+  { title: 'Shri Sukta Yantra', image: '/images/ShriSukta.jpg', description: 'Aids in achieving material and spiritual wealth through Vedic mantras.' },
+  { title: 'Chauntisa Yantra', image: '/images/Chauntisa.jpg', description: 'Enhances mental clarity and spiritual balance.' },
+  { title: 'Ganesha Yantra', image: '/images/Ganesha.jpg', description: 'Removes obstacles and ensures success in all endeavors.' },
+  { title: 'Shiva Yantra', image: '/images/Shiva.jpg', description: 'Offers protection and inner strength through Lord Shiva’s energy.' },
+  { title: 'Rama Yantra', image: '/images/Rama.jpg', description: 'Promotes righteousness and harmony by invoking Lord Rama’s blessings.' },
+  { title: 'Hanuman Yantra', image: '/images/Hanuman.jpg', description: 'Provides strength, courage, and protection from negative energies.' },
+  { title: 'Vishnu Yantra', image: '/images/Vishnu.jpg', description: 'Brings stability, harmony, and divine blessings of Lord Vishnu.' },
+  { title: 'Krishna Yantra', image: '/images/Krishna.jpg', description: 'Enhances love, devotion, and spiritual upliftment with Lord Krishna’s blessings.' },
+  { title: 'Saraswati Yantra', image: '/images/Saraswati.jpg', description: 'Boosts knowledge, wisdom, and creativity with the blessings of Goddess Saraswati.' },
+  { title: 'Dasha Mahavidya Yantra', image: '/images/DashaMahavidya.jpg', description: 'Balances energies and provides holistic growth through the ten wisdom goddesses.' },
+  { title: 'Durga Yantra', image: '/images/Durga.jpg', description: 'Protects from evil influences and grants courage and victory.' },
 ];
 
 const Yantras = () => {
@@ -48,11 +47,11 @@ const Yantras = () => {
       <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
         Yantras
       </h1>
-      <div className="flex-wrap justify-center gap-6 px-4 grid grid-cols-1 md:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
         {yantras.map((yantra, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-80 transform hover:scale-105 transition-all duration-300"
+            className="bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-lg w-80 overflow-hidden transform hover:scale-105 transition duration-300"
           >
             <Image
               src={yantra.image}
@@ -62,7 +61,7 @@ const Yantras = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-2xl text-nowrap font-bold text-gray-800 dark:text-white">
+              <h2 className="text-xl text-nowrap font-bold text-gray-800 dark:text-white mb-4">
                 {yantra.title}
               </h2>
               <button
@@ -81,7 +80,7 @@ const Yantras = () => {
           onClose={closeModal}
           image={selectedYantra.image}
           title={selectedYantra.title}
-          description="Add a description here if needed." // Add unique descriptions if available
+          description={selectedYantra.description}
           onAddToCart={handleAddToCart}
         />
       )}

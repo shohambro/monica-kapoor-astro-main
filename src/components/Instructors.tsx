@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Podcast2 from "../../public/images/Podcast2.jpg";
+import PodcastH2H from "../../public/images/PodcastH2H.png";
 import Shorts1 from "../../public/images/Shorts1.jpg";
 import Shorts2 from "../../public/images/Shorts2.jpg";
+import Link from "next/link";
 
 function YouTubeVideos() {
   return (
@@ -52,7 +53,7 @@ function YouTubeVideos() {
           className="block"
         >
           <Image
-            src={Podcast2}
+            src={PodcastH2H}
             alt="Full Video Thumbnail"
             width={1200}
             height={500}
@@ -86,7 +87,7 @@ function YouTubeVideos() {
               alt="Short 1 Thumbnail"
               width={800}
               height={400}
-              className="w-full h-48  object-center"
+              className="w-full h-48 object-center"
             />
           </a>
           <div className="p-4">
@@ -135,7 +136,13 @@ function YouTubeVideos() {
           </div>
         </div>
       </div>
-      <button className="text-sm w-auto px-6 py-3 border bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">View more</button>
+      <div className="mt-6">
+          <Link href={"/featured-videos"}>
+            <button className="text-sm w-auto px-6 py-3 bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
+              View All
+            </button>
+          </Link>
+        </div>
     </div>
   );
 }

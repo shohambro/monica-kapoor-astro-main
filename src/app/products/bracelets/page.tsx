@@ -127,8 +127,8 @@ const Bracelets = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-400 to-purple-500 py-12 pt-36">
-      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
+      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
         Bracelets
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
@@ -145,12 +145,12 @@ const Bracelets = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              <h2 className="text-xl font-bold text-gray-800 text-center dark:text-white mb-4">
+              <h2 className="text-xl text-nowrap font-bold text-gray-800 dark:text-white mb-4">
                 {bracelet.title}
               </h2>
               <button
                 onClick={() => openModal(bracelet)}
-                className="w-full py-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition duration-300"
+                className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300"
               >
                 Buy Now
               </button>
