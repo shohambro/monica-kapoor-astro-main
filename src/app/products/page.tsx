@@ -15,21 +15,27 @@ function page() {
   const services = [
     {
       title: 'Stones',
-      description: 'Unlock the mysteries of numbers and their influence on your life with our expert numerology service.',
-      image: '/images/Numerology.jpg', // Replace with your image path
+      description: 'Discover natures treasures - handpicked precious and semi-precious stones that combine timeless beauty with powerful energetic properties.',
+      image: '/images/Stones.jpg', // Replace with your image path
       link: '/products/stones'
     },
     {
       title: 'Bracelets',
-      description: 'Discover insights into your past, present, and future with our personalized tarot readings.',
-      image: '/images/Tarot.jpg', // Replace with your image path
+      description: 'Wear the cosmos on your wrist with our custom-designed zodiac bracelets, featuring carefully selected stones aligned with your astrological energies.',
+      image: '/images/LapisLazuli.jpg', // Replace with your image path
       link: '/products/bracelets'
     },
     {
       title: 'Yantras',
-      description: 'Gain clarity and guidance from our experienced psychics to navigate life’s challenges.',
-      image: '/images/Psychic.jpg', // Replace with your image path
+      description: 'Sacred geometric patterns meticulously crafted to harness cosmic energies, helping manifest your goals and enhance spiritual practices.',
+      image: '/images/Saraswati.jpg', // Replace with your image path
       link: '/products/yantras'
+    },
+    {
+      title: 'Our Specialty',
+      description: 'Pure, alcohol-free botanical perfumes crafted through traditional distillation, capturing the sacred essence of flowers, herbs, and precious woods.',
+      image: '/images/ChandanAttar.jpg', // Replace with your image path
+      link: '/products/specialty'
     },
   ];
 

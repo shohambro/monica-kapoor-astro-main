@@ -16,7 +16,7 @@ export default function Home() {
       <FeaturedCourses />
       <WhyChooseUs />
       <MusicSchoolTestimonials />
-      <UpcomingWebinars />
+      {/* <UpcomingWebinars /> */}
       <Instructors />
       <Footer />
     </main>

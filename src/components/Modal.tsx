@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, image, title, descriptio
           ×
         </button>
         <div className="p-6 text-center">
-          <img src={image} alt={title} className="w-full h-48 object-cover rounded-md" />
+          <img src={image} alt={title} className="w-full h-72 object-cover rounded-md" />
           <h2 className="text-2xl text-black font-bold mt-4">{title}</h2>
           <p className="text-black mt-2">{description}</p>
           <button

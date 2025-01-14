@@ -26,21 +26,21 @@ function FeaturedVideosPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
+      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-20 text-[#6a1818]">
         Featured Videos and Clips
       </h1>
 
       {/* Top Card */}
       <div className="flex justify-center mb-12">
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-5xl transform hover:scale-105 transition-all duration-300">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-xl transform hover:scale-105 transition-all duration-300">
           <Image
-            src="/images/OwnerChannel.jpg" // Replace this with the actual image path
+            src="/images/Podcast1.jpg" // Replace this with the actual image path
             alt="Owner's Channel"
             width={960}
             height={400}
-            className="w-full h-64 object-cover"
+            className="w-full h-76 object-cover"
           />
-          <div className="p-6 text-center">
+          <div className="p-4 text-center">
             <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
               Heal with Mother Universe - Monica Kapoor
             </h2>
@@ -61,7 +61,7 @@ function FeaturedVideosPage() {
         {/* Card 1 */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
           <Image
-            src="/images/Placeholder1.jpg" // Replace with the actual image for Card 1
+            src="/images/YT8.jpg" // Replace with the actual image for Card 1
             alt="Featured Video 1"
             width={720}
             height={400}
@@ -69,9 +69,9 @@ function FeaturedVideosPage() {
           />
           <div className="p-6 text-center">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Featured Video 1
+            Secrets for 2025 Success | Manifest Money, Love Marriage & Growth in 2025 | @newyear
             </h2>
-            <Link href="https://www.youtube.com/watch?v=link1"> {/* Replace with the actual link for Card 1 */}
+            <Link href="https://www.youtube.com/watch?v=JZf7OEhYltg">
               <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
                 Watch on YouTube
               </button>
@@ -82,7 +82,7 @@ function FeaturedVideosPage() {
         {/* Card 2 */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
           <Image
-            src="/images/Placeholder2.jpg" // Replace with the actual image for Card 2
+            src="/images/PodcastH2H.png" // Replace with the actual image for Card 2\
             alt="Featured Video 2"
             width={720}
             height={400}
@@ -90,9 +90,9 @@ function FeaturedVideosPage() {
           />
           <div className="p-6 text-center">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-              Featured Video 2
+            🌟 Astrology and Numerology : All Secrets Revealed Ft Monica Kapoor
             </h2>
-            <Link href="https://www.youtube.com/watch?v=link2"> {/* Replace with the actual link for Card 2 */}
+            <Link href="https://www.youtube.com/watch?v=7922yuQ2GTY">
               <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
                 Watch on YouTube
               </button>
@@ -109,7 +109,7 @@ function FeaturedVideosPage() {
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full transform hover:scale-105 transition-all duration-300"
           >
             <Image
-              src="/images/Placeholder.jpg" // Replace this with the actual image path for each video
+              src="/images/AS1.jpg"
               alt={video.title}
               width={320}
               height={200}

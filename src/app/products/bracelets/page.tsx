@@ -142,7 +142,7 @@ const Bracelets = () => {
               alt={bracelet.title}
               width={320}
               height={200}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover rounded-md"
             />
             <div className="p-6">
               <h2 className="text-xl text-nowrap font-bold text-gray-800 dark:text-white mb-4">

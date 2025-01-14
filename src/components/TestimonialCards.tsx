@@ -4,33 +4,33 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 const musicSchoolTestimonials = [
   {
     quote:
-      "Joining the music school transformed my understanding of music and helped me to truly discover my own sound. The instructors are world-class!",
-    name: "Alex Johnson",
-    title: "Guitar Student",
+      "I really want to thank Monica mam she helped me a lot, her remedies were so simple, I have done those remedy easily.she is 24*7available on chat assistant.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
   },
   {
     quote:
-      "The community and support at this school are unmatched. I've grown not just as a pianist, but also as a performer, thanks to their comprehensive approach.",
-    name: "Samantha Lee",
-    title: "Piano Student",
+      "Monica Kapoor is the queen of astrology,the best ever experience in my life she takes away all my problems with a click of her finger.Wonderful remedies suggested by her.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
   },
   {
     quote:
-      "This school offered me the tools and confidence to take my singing to the next level. I'm endlessly grateful for the personalized coaching.",
-    name: "Michael Chen",
-    title: "Vocal Student",
+      "Always my go to mentor and perfect guidance 🫶🏻 blessed to have her🙏🏻🧿",
+    name: "Uttara",
+    title: "From-Astrotalk",
   },
   {
     quote:
-      "As a violinist, finding the right mentor can be challenging, but this school matched me with a teacher who truly understands my goals and challenges.",
-    name: "Emily Taylor",
-    title: "Violin Student",
+      "I have consulted monica mam so many times and really believe in her predictions.She told me to perform simple remedies and luckily they worked for me. Thanks mam.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
   },
   {
     quote:
-      "The production courses here opened my eyes to the intricacies of music production. Highly recommend for any aspiring producers!",
-    name: "Chris Morales",
-    title: "Music Production Student",
+      "the way she helped her client is commendable and always 24*7 available for customer service.thank you mam for the support I will always be obliged❣️🙏",
+    name: "Anonymous",
+    title: "From-Astrotalk",
   },
 ];
 

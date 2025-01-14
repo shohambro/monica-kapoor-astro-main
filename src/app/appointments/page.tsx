@@ -27,7 +27,7 @@ function BookAppointmentForm() {
     const service = e.target.value;
     setSelectedService(service);
     setPrice(servicePrices[service]);
-    setSelectedMagicSpell(""); // Reset magic spell selection
+    setSelectedMagicSpell("");
     setMagicSpellPrice(null);
   };
 
@@ -38,7 +38,7 @@ function BookAppointmentForm() {
   };
 
   return (
-    <div className="h-[50rem] w-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center px-4">
+    <div className="h-[50rem] w-full mt-3 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center px-4">
       <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-8">
         <h2 className="text-2xl text-[#6a1818] font-bold text-center mb-6">
           Appointment Form
@@ -50,7 +50,7 @@ function BookAppointmentForm() {
             </label>
             <input
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your Name"
               className="w-full border text-black border-gray-300 rounded-lg p-2"
               required
             />
@@ -61,7 +61,7 @@ function BookAppointmentForm() {
             </label>
             <input
               type="tel"
-              placeholder="Enter your mobile number"
+              placeholder="Enter your Mobile Number"
               className="w-full border text-black border-gray-300 rounded-lg p-2"
               required
             />
@@ -137,7 +137,7 @@ function BookAppointmentForm() {
               />
             </div>
           )}
-          {selectedService === "magic spells / pujas" && (
+          {selectedService === "Magic Spells / Pujas" && (
             <>
               <div>
                 <label className="block text-sm font-medium text-black">
