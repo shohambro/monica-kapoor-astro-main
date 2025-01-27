@@ -1,189 +1,196 @@
 "use client";
+import React from "react";
+import { useForm, Controller, SubmitHandler } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import "react-datepicker/dist/react-datepicker.css";
+import { Appointment } from "../../../action/login";
 
-import React, { useState } from "react";
-import Link from "next/link";
+export const formSchema = z.object({
+  Name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  gender: z.enum(["male", "female", "other"], {
+    message: "Gender is required",
+  }),
+  dob: z.string().refine(
+    (value) => {
+      if (!value) return false; // Ensure it's not empty
+      const date = new Date(value);
+      return !isNaN(date.getTime()) && date >= new Date(1900, 0, 1);
+    },
+    { message: "Date of birth must be at least 2000-01-01" }
+  ),
+  timeofbirth: z
+    .string()
+    .regex(
+      /^([01]\d|2[0-3]):([0-5]\d)$/,
+      "Invalid time format, must be HH:mm (24-hour format)"
+    )
+    .refine((value) => {
+      const [hours, minutes] = value.split(":").map(Number);
+      return hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59;
+    }, "Time must be valid within a 24-hour range"),
+    PlaceOfBirth: z.string().min(1, "Place of birth is required"),
+});
 
-function BookAppointmentForm() {
-  const servicePrices: { [key: string]: number } = {
-    "Numerology": 500,
-    "Tarot Reading": 700,
-    "Psychic Reading": 900,
-    "Magic Spells / Pujas": 1500,
+type FormData = z.infer<typeof formSchema>;
+
+const ReactHookFormWithZod: React.FC = () => {
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({
+    defaultValues: {
+      Name: "",
+      email: "",
+      gender: undefined,
+      dob: undefined,
+      timeofbirth: undefined,
+      PlaceOfBirth: "",
+    },
+    resolver: zodResolver(formSchema),
+  });
+
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    try {
+      console.log("Form data:", data);
+      const response = await Appointment(data);
+  
+      // Check the response for success or error
+      if (response.success) {
+        // Handle success - you can display a success message or redirect user
+        console.log("Success:", response.success);
+      } else if (response.error) {
+        // Handle error - display the error message to the user
+        console.error("Error:", response.error);
+      }
+  
+    } catch (error) {
+      console.error("Unexpected error:", error);
+      setError("root", {
+        type: "manual",
+        message: "An unexpected error occurred. Please try again later.",
+      });
+    }
   };
-
-  const magicSpellOptions: { [key: string]: number } = {
-    "Cleanse and Lock Your Aura": 1200,
-    "Evil-Eye-Nazar-Lagna": 800,
-    "Evil Eye (Nazar Lagna) for Pet": 600,
-    "Spiritual Spells and Puja": 1500,
-  };
-
-  const [selectedService, setSelectedService] = useState<string>("");
-  const [price, setPrice] = useState<number | null>(null);
-  const [selectedMagicSpell, setSelectedMagicSpell] = useState<string>("");
-  const [magicSpellPrice, setMagicSpellPrice] = useState<number | null>(null);
-
-  const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const service = e.target.value;
-    setSelectedService(service);
-    setPrice(servicePrices[service]);
-    setSelectedMagicSpell("");
-    setMagicSpellPrice(null);
-  };
-
-  const handleMagicSpellChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const spell = e.target.value;
-    setSelectedMagicSpell(spell);
-    setMagicSpellPrice(magicSpellOptions[spell]);
-  };
+  
 
   return (
-    <div className="h-[50rem] w-full mt-3 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center px-4">
-      <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-8">
+    <div className="h-screen flex items-center justify-center bg-gradient-to-br from-yellow-400 to-orange-500 px-4">
+      <div className="w-full mt-32 mb-20 max-w-lg bg-white shadow-lg rounded-lg p-8">
         <h2 className="text-2xl text-[#6a1818] font-bold text-center mb-6">
-          Appointment Form
+          Sign Up Form
         </h2>
-        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid grid-cols-1 gap-4"
+        >
+          {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-black">
-              Name
-            </label>
+            <label className="block text-sm font-medium text-black">Name</label>
             <input
-              type="text"
-              placeholder="Enter your Name"
+              {...register("Name")}
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              required
             />
+            {errors.Name && (
+              <p className="text-sm text-orangered">{errors.Name.message}</p>
+            )}
           </div>
+
+          {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-black">
-              Mobile Number
-            </label>
+            <label className="block text-sm font-medium text-black">Email</label>
             <input
-              type="tel"
-              placeholder="Enter your Mobile Number"
+              {...register("email")}
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              required
             />
+            {errors.email && (
+              <p className="text-sm text-orangered">{errors.email.message}</p>
+            )}
           </div>
+
+          {/* Gender */}
           <div>
-            <label className="block text-sm font-medium text-black">
-              Email
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
+            <label className="block text-sm font-medium text-black">Gender</label>
+            <select
+              {...register("gender")}
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              required
-            />
+            >
+              <option value="">Select...</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            {errors.gender && (
+              <p className="text-sm text-orangered">{errors.gender.message}</p>
+            )}
           </div>
+
+          {/* Date of Birth */}
           <div>
             <label className="block text-sm font-medium text-black">
-              Date
+              Date of Birth
             </label>
             <input
+              {...register("dob")}
               type="date"
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              required
             />
+            {errors.dob && (
+              <p className="text-sm text-orangered">{errors.dob.message}</p>
+            )}
           </div>
+
+          {/* Time of Birth */}
           <div>
             <label className="block text-sm font-medium text-black">
-              Time
+              Time of Birth
             </label>
             <input
+              {...register("timeofbirth")}
               type="time"
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              required
             />
-          </div>
-          <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-black">
-              Address
-            </label>
-            <textarea
-              placeholder="Enter your address"
-              className="w-full border text-black border-gray-300 rounded-lg p-2"
-              rows={3}
-              required
-            ></textarea>
+            {errors.timeofbirth && (
+              <p className="text-sm text-orangered">
+                {errors.timeofbirth.message}
+              </p>
+            )}
           </div>
           <div>
-            <label className="block text-sm font-medium text-black">
-              Service
-            </label>
-            <select
+            <label className="block text-sm font-medium text-black">Place of Birth</label>
+            <input
+              {...register("PlaceOfBirth")}
               className="w-full border text-black border-gray-300 rounded-lg p-2"
-              onChange={handleServiceChange}
-            >
-              <option value="">Select Service</option>
-              {Object.keys(servicePrices).map((service) => (
-                <option key={service} value={service}>
-                  {service}
-                </option>
-              ))}
-            </select>
+            />
+            {errors.PlaceOfBirth && (
+              <p className="text-sm text-orangered">{errors.PlaceOfBirth.message}</p>
+            )}
           </div>
-          {price !== null && (
-            <div>
-              <label className="block text-sm font-medium text-black">
-                Price
-              </label>
-              <input
-                type="text"
-                value={price}
-                readOnly
-                className="w-full border text-black border-gray-300 rounded-lg p-2"
-              />
-            </div>
-          )}
-          {selectedService === "Magic Spells / Pujas" && (
-            <>
-              <div>
-                <label className="block text-sm font-medium text-black">
-                  Magic Spell / Puja
-                </label>
-                <select
-                  className="w-full border text-black border-gray-300 rounded-lg p-2"
-                  onChange={handleMagicSpellChange}
-                >
-                  <option value="">Select Magic Spell / Puja</option>
-                  {Object.keys(magicSpellOptions).map((spell) => (
-                    <option key={spell} value={spell}>
-                      {spell}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {magicSpellPrice !== null && (
-                <div>
-                  <label className="block text-sm font-medium text-black">
-                    Magic Spell / Puja Price
-                  </label>
-                  <input
-                    type="text"
-                    value={magicSpellPrice}
-                    readOnly
-                    className="w-full border text-black border-gray-300 rounded-lg p-2"
-                  />
-                </div>
-              )}
-            </>
-          )}
-          <div className="sm:col-span-2 flex justify-center">
-          <Link href={"/personal"}>
+
+          {/* Submit Button */}
+          <div className="mt-4">
             <button
               type="submit"
-              className="w-full p-3 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300 ease-in-out"
+              disabled={isSubmitting}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 rounded-lg py-2 text-lg"
             >
-              Book an Appointment
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
-          </Link>
           </div>
+
+          {/* Root Error */}
+          {errors.root && (
+            <p className="text-sm text-red-500 text-center mt-4">
+              {errors.root.message}
+            </p>
+          )}
         </form>
       </div>
     </div>
   );
-}
+};
 
-export default BookAppointmentForm;
+export default ReactHookFormWithZod;

@@ -1,9 +1,11 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
-import Numerology from "../../public/images/Numerology.jpg";
-import YantraScroll1 from "../../public/images/YantraScroll1.jpg";
-import Scroll2 from "../../public/images/Scroll2.jpg";
-import BraceletScroll1 from "../../public/images/BraceletScroll1.jpg";
+import { Philosopher } from 'next/font/google';
+
+const philosopher = Philosopher({
+  subsets: ['latin'],
+  weight: ['700'],
+});
 
 const astrologyContent = [
   {
@@ -31,14 +33,19 @@ const astrologyContent = [
 const astrologyImages = [
   "/images/Numerology.jpg",
   "/images/BraceletScroll1.jpg",
-  "/images/YantraScroll1.jpg", 
+  "/images/YantraScroll1.jpg",
   "/images/Scroll3.jpg",
 ];
 
 function WhyChooseUs() {
   return (
-    <div>
-      <StickyScroll content={astrologyContent} images={astrologyImages} />
+    <div className="max-w-7xl mx-auto px-4">
+      <div className={philosopher.className}>
+        <StickyScroll 
+          content={astrologyContent} 
+          images={astrologyImages}
+        />
+      </div>
     </div>
   );
 }

@@ -1,10 +1,20 @@
 'use client';
 
-import Image from 'next/image';
 import React, { useState } from 'react';
-import Modal from '../../../components/Modal'; // Adjust the import path as needed
+import Image from 'next/image';
+import Modal from '../../../components/Modal';
+import { Philosopher, Open_Sans } from 'next/font/google';
 
-// Define the type for a Yantra
+const philosopher = Philosopher({
+  subsets: ['latin'],
+  weight: ['700'],
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+});
+
 interface Yantra {
   title: string;
   image: string;
@@ -14,7 +24,7 @@ interface Yantra {
 const yantras: Yantra[] = [
   { title: 'Vyapar Vriddhi Yantra', image: '/images/VyaparVriddhi.jpg', description: 'Enhances business growth and financial prosperity.' },
   { title: 'Lakshmi Ganesha Yantra', image: '/images/LakshmiGanesha.jpg', description: 'Invokes the blessings of Goddess Lakshmi and Lord Ganesha for wealth and wisdom.' },
-  { title: 'Kubera Yantra', image: '/images/Kubera.jpg', description: 'Attracts wealth and financial stability with the blessings of Lord Kubera.' },
+  { title: 'Kuber Yantra', image: '/images/Kubera.jpg', description: 'Attracts wealth and financial stability with the blessings of Lord Kubera.' },
   { title: 'Lakshmi Yantra', image: '/images/Lakshmi.jpg', description: 'Dedicated to Goddess Lakshmi, it brings prosperity and abundance.' },
   { title: 'Kamala Yantra', image: '/images/Kamala.jpg', description: 'Removes obstacles and attracts divine blessings for spiritual growth.' },
   { title: 'Shri Sukta Yantra', image: '/images/ShriSukta.jpg', description: 'Aids in achieving material and spiritual wealth through Vedic mantras.' },
@@ -53,33 +63,33 @@ const Yantras = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
+      <h1 className={`${philosopher.className} text-lg md:text-6xl text-center font-bold mb-20 text-[#6a1818]`}>
         Yantras
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
         {yantras.map((yantra, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-lg w-80 overflow-hidden transform hover:scale-105 transition duration-300"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 flex flex-col"
           >
             <Image
               src={yantra.image}
               alt={yantra.title}
               width={320}
               height={200}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full h-48 object-cover"
             />
-            <div className="p-6">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+            <div className="p-6 flex-grow">
+              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-8 text-[#6a1818]`}>
                 {yantra.title}
               </h2>
-              <button
-                onClick={() => openModal(yantra)}
-                className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300"
-              >
-                Buy Now
-              </button>
             </div>
+            <button
+              onClick={() => openModal(yantra)}
+              className="w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-b-2xl"
+            >
+              Buy Now
+            </button>
           </div>
         ))}
       </div>

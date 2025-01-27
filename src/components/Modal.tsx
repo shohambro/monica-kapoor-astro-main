@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface ModalProps {
   isOpen: boolean;
@@ -7,34 +7,42 @@ interface ModalProps {
   image: string;
   title: string;
   description: string;
-  onAddToCart: () => void;
+  onAddToCart?: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, image, title, description, onAddToCart }) => {
-
- 
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  image,
+  title,
+  description,
+}) => {
   if (!isOpen) return null;
 
   return (
-    <div  className="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg shadow-lg w-96 relative">
+    <div className="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
         <button
-          className="absolute right-2 text-4xl text-red-500 hover:text-gray-900"
+          className="absolute top-2 right-2 text-2xl text-gray-600 hover:text-gray-900"
           onClick={onClose}
         >
           ×
         </button>
-        <div className="p-6 text-center">
-          <Image src={image} alt={title} className="w-full h-72 object-cover rounded-md" />
-          <h2 className="text-2xl text-black font-bold mt-4">{title}</h2>
-          <p className="text-black mt-2">{description}</p>
-          <button
-            onClick={onAddToCart}
-            className="mt-6 w-full py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition duration-300"
-          >
-            Add to Cart
-          </button>
-        </div>
+        <Image
+          src={image}
+          alt={title}
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover rounded-md"
+        />
+        <h2 className="text-xl font-bold text-gray-800 mt-4">{title}</h2>
+        <p className="text-gray-600 mt-2">{description}</p>
+        <button
+          onClick={onClose}
+          className="mt-6 w-full py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300"
+        >
+          Close
+        </button>
       </div>
     </div>
   );

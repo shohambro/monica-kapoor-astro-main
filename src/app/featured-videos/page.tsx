@@ -3,6 +3,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Philosopher, Open_Sans } from 'next/font/google';
+
+const philosopher = Philosopher({
+  subsets: ['latin'],
+  weight: ['700'],
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 
 function FeaturedVideosPage() {
   const videos = [
@@ -26,12 +37,11 @@ function FeaturedVideosPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-20 text-[#6a1818]">
+      <h1 className={`${philosopher.className} text-lg md:text-6xl text-center font-bold mb-20 text-[#6a1818]`}>
         Featured Videos and Clips
       </h1>
-
-      {/* Top Card */}
-      <div className="flex justify-center mb-12">
+{/* Top Card */}
+<div className="flex justify-center mb-12">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-xl transform hover:scale-105 transition-all duration-300">
           <Image
             src="/images/Podcast1.jpg" // Replace this with the actual image path
@@ -41,14 +51,18 @@ function FeaturedVideosPage() {
             className="w-full h-76 object-cover"
           />
           <div className="p-4 text-center">
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+            <h2
+              className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}
+            >
               Heal with Mother Universe - Monica Kapoor
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">
+            <p
+              className={`${openSans.className} text-gray-600 dark:text-gray-300 text-sm mb-6`}
+            >
               Explore transformative healing videos and life-changing clips by Monica Kapoor.
             </p>
             <Link href="https://www.youtube.com/@healwithmotheruniverse">
-              <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white hover:text-white font-semibold rounded-lg transition duration-300">
+              <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
                 Follow on YouTube
               </button>
             </Link>
@@ -56,8 +70,8 @@ function FeaturedVideosPage() {
         </div>
       </div>
 
-      {/* Two Side-by-Side Cards */}
-      <div className="flex flex-wrap justify-center gap-6 mb-12">
+        {/* Two Side-by-Side Cards */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
         {/* Card 1 */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
           <Image
@@ -68,8 +82,8 @@ function FeaturedVideosPage() {
             className="w-full h-64 object-cover"
           />
           <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-            Secrets for 2025 Success | Manifest Money, Love Marriage & Growth in 2025 | @newyear
+            <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
+              Secrets for 2025 Success | Manifest Money, Love Marriage & Growth in 2025 | @newyear
             </h2>
             <Link href="https://www.youtube.com/watch?v=JZf7OEhYltg">
               <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
@@ -82,15 +96,15 @@ function FeaturedVideosPage() {
         {/* Card 2 */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
           <Image
-            src="/images/PodcastH2H.png" // Replace with the actual image for Card 2\
+            src="/images/PodcastH2H.png" // Replace with the actual image for Card 2
             alt="Featured Video 2"
             width={720}
             height={400}
             className="w-full h-64 object-cover"
           />
           <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
-            🌟 Astrology and Numerology : All Secrets Revealed Ft Monica Kapoor
+            <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
+              🌟 Astrology and Numerology : All Secrets Revealed Ft Monica Kapoor | H2H Conversations
             </h2>
             <Link href="https://www.youtube.com/watch?v=7922yuQ2GTY">
               <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
@@ -101,30 +115,29 @@ function FeaturedVideosPage() {
         </div>
       </div>
 
-      {/* Video Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
         {videos.map((video, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full transform hover:scale-105 transition-all duration-300"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 flex flex-col"
           >
             <Image
               src="/images/AS1.jpg"
               alt={video.title}
               width={320}
               height={200}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover rounded-t-2xl"
             />
-            <div className="p-6">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+            <div className="p-6 flex-grow">
+              <h2 className={`${philosopher.className} text-xl font-bold text-gray-800 dark:text-white mb-4`}>
                 {video.title}
               </h2>
-              <Link href={video.link}>
-                <button className="w-full py-2 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
-                  Watch on YouTube
-                </button>
-              </Link>
             </div>
+            <Link href={video.link}>
+              <button className="w-full py-2 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-b-2xl">
+                Watch on YouTube
+              </button>
+            </Link>
           </div>
         ))}
       </div>

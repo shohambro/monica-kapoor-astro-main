@@ -3,6 +3,17 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Modal from '../../../components/Modal';
+import { Philosopher, Open_Sans } from 'next/font/google';
+
+const philosopher = Philosopher({
+  subsets: ['latin'],
+  weight: ['700'],
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 
 interface Bracelet {
   title: string;
@@ -98,7 +109,7 @@ const bracelets: Bracelet[] = [
   },
   {
     title: 'Seven Chakras Bracelet',
-    description: 'Representing the body’s energy points, symbolizing balance and alignment for a stress-free, abundant life.',
+    description: 'Representing the body energy points, symbolizing balance and alignment for a stress-free, abundant life.',
     image: '/images/SevenChakras.jpg',
   },
   {
@@ -136,33 +147,33 @@ const Bracelets = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className="text-lg md:text-6xl text-center font-sans font-bold mb-12 text-[#6a1818]">
+      <h1 className={`${philosopher.className} text-lg md:text-6xl text-center font-bold mb-20 text-[#6a1818]`}>
         Bracelets
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
         {bracelets.map((bracelet, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-lg w-80 overflow-hidden transform hover:scale-105 transition duration-300"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 flex flex-col"
           >
             <Image
               src={bracelet.image}
               alt={bracelet.title}
               width={320}
               height={200}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full h-48 object-cover"
             />
-            <div className="p-6">
-              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+            <div className="p-6 flex-grow">
+              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-8 text-[#6a1818]`}>
                 {bracelet.title}
               </h2>
-              <button
-                onClick={() => openModal(bracelet)}
-                className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300"
-              >
-                Buy Now
-              </button>
             </div>
+            <button
+              onClick={() => openModal(bracelet)}
+              className="w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-b-2xl"
+            >
+              Buy Now
+            </button>
           </div>
         ))}
       </div>
