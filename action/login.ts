@@ -1,6 +1,6 @@
 "use client";
 import z from "zod";
-import { formSchema } from "@/app/appointments/page";
+import { formSchema } from "@/app/appointments/schema";
 import { sendAppointmentEmail } from "@/utils/mail";
 
 export const Appointment = async (data: z.infer<typeof formSchema>) => {

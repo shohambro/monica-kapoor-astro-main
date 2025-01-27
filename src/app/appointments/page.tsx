@@ -1,43 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import "react-datepicker/dist/react-datepicker.css";
 import { Appointment } from "../../../action/login";
-import { useState } from "react";
 import PricingModal from "@/components/PricingModal";
+import { formSchema, FormData } from "@/app/appointments/schema";
 
-export const formSchema = z.object({
-  Name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  gender: z.enum(["male", "female", "other"], {
-    message: "Gender is required",
-  }),
-  dob: z.string().refine(
-    (value) => {
-      if (!value) return false;
-      const date = new Date(value);
-      return !isNaN(date.getTime()) && date >= new Date(1900, 0, 1);
-    },
-    { message: "Date of birth must be at least 2000-01-01" }
-  ),
-  timeofbirth: z
-    .string()
-    .regex(
-      /^([01]\d|2[0-3]):([0-5]\d)$/,
-      "Invalid time format, must be HH:mm (24-hour format)"
-    )
-    .refine((value) => {
-      const [hours, minutes] = value.split(":").map(Number);
-      return hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59;
-    }, "Time must be valid within a 24-hour range"),
-  PlaceOfBirth: z.string().min(1, "Place of birth is required"),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-const ReactHookFormWithZod: React.FC = () => {
+const AppointmentPage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   
@@ -49,10 +19,10 @@ const ReactHookFormWithZod: React.FC = () => {
     setIsModalOpen(false);
   };
 
-  const defaultValues = {
+  const defaultValues: FormData = {
     Name: "",
     email: "",
-    gender: undefined,
+    gender: "male", // provide a default value from the enum
     dob: "",
     timeofbirth: "",
     PlaceOfBirth: "",
@@ -77,9 +47,7 @@ const ReactHookFormWithZod: React.FC = () => {
       if (response.success) {
         setSuccess(true);
         console.log("Success:", response.success);
-        // Reset form after successful submission
         reset(defaultValues);
-        // Optional: Clear success message after a delay
         setTimeout(() => {
           setSuccess(false);
         }, 3000);
@@ -95,10 +63,9 @@ const ReactHookFormWithZod: React.FC = () => {
     }
   };
 
-  // Rest of your component remains the same...
   return (
     <div className="flex flex-col justify-center items-center space-y-2 min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 sm:px-3 py-12 pt-36">
-      <div className="w-full max-w-lg mx-auto bg-white shadow-lg rounded-lg  mb-10 p-6 pt-8">
+      <div className="w-full max-w-lg mx-auto bg-white shadow-lg rounded-lg mb-10 p-6 pt-8">
         <h2 className="text-2xl text-[#6a1818] font-bold text-center mb-6">
           Personal Details
         </h2>
@@ -137,7 +104,6 @@ const ReactHookFormWithZod: React.FC = () => {
               {...register("gender")}
               className="w-full border text-black border-gray-300 rounded-lg p-2"
             >
-              <option value="">Select...</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
@@ -217,14 +183,15 @@ const ReactHookFormWithZod: React.FC = () => {
           )}
         </form>
       </div>
-      <button onClick={openModal} className="mt-6 px-3 py-2 bg-white hover:bg-green-300 text-orange-500 font-semibold rounded-lg transition duration-300">View Pricing</button>
-      {isModalOpen && (
-        <PricingModal
-          onClose={closeModal}
-        />
-      )}
+      <button 
+        onClick={openModal} 
+        className="mt-6 px-3 py-2 bg-white hover:bg-green-300 text-orange-500 font-semibold rounded-lg transition duration-300"
+      >
+        View Pricing
+      </button>
+      {isModalOpen && <PricingModal onClose={closeModal} />}
     </div>
   );
 };
 
-export default ReactHookFormWithZod;
+export default AppointmentPage;
