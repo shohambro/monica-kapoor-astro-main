@@ -13,7 +13,7 @@ export const sendAppointmentEmail = async (
 ) => {
     await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: email,
+        to: "shohambrojobasi@gmail.com",
         subject: "New Appointment Confirmation",
         html: `
             <!DOCTYPE html>
