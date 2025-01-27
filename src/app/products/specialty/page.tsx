@@ -61,7 +61,7 @@ const OurSpecialty = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className={`${philosopher.className} text-lg md:text-6xl text-center font-bold mb-8 text-[#6a1818]`}>
+      <h1 className={`${philosopher.className} text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]`}>
         Our Specialty
       </h1>
       <div className="flex flex-wrap justify-center gap-20 p-8">

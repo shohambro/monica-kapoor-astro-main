@@ -36,7 +36,7 @@ const Modal: React.FC<ModalProps> = ({
           className="w-full h-48 object-cover rounded-md"
         />
         <h2 className="text-xl font-bold text-gray-800 mt-4">{title}</h2>
-        <p className="text-gray-600 mt-2">{description}</p>
+        <p className="text-gray-600 text-sm mt-2">{description}</p>
         <button
           onClick={onClose}
           className="mt-6 w-full py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300"

@@ -65,7 +65,7 @@ const ProductsPage = () => {
       {/* Main Heading */}
       <h1
         className={cn(
-          "text-lg md:text-6xl text-center font-bold mb-12 text-[#6a1818]",
+          "text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]",
           headingFont.className
         )}
       >

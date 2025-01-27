@@ -1,8 +1,10 @@
-"use client";
+'use client';
+import { useState } from "react"; // Import useState for managing modal state
 import Link from "next/link";
-
 import { Philosopher, Open_Sans } from "next/font/google";
 import { cn } from "@/utils/cn";
+import Modal from "@/components/Modal"; // Import the Modal component
+// import Copyright from "../../public/images/Copyright.png";
 
 const headingFont = Philosopher({
   subsets: ["latin"],
@@ -16,6 +18,16 @@ const paragraphFont = Open_Sans({
 });
 
 function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <footer className="py-12 bg-gradient-to-br from-yellow-400 to-orange-500 text-[#6a1818]">
       <div className="container mx-auto px-6 lg:px-20">
@@ -71,11 +83,18 @@ function Footer() {
           </div>
         </div>
         <div className="mt-4 text-center border-t border-neutral-300 pt-6">
-          <p className={cn("text-sm lg:text-lg", paragraphFont.className)}>
-            © {new Date().getFullYear()} Monica Kapoor. All rights reserved.
+          <p
+            className={cn("text-sm lg:text-lg", paragraphFont.className)}
+            onClick={handleModalOpen} // Open the modal on click
+            style={{ cursor: "pointer" }}
+          >
+            © {new Date().getFullYear()} Divine Monica. All rights reserved.
           </p>
         </div>
       </div>
+
+      {/* Modal component */}
+      <Modal isOpen={isModalOpen} image={'/images/Copyright.png'} onClose={handleModalClose} title="Copyright Notice" description="The content of this website, including the text, images, graphics, audio, and all related elements, is the exclusive property of Monica Kapoor and is protected under applicable copyright laws. Unauthorized use, reproduction, or distribution of this content, in whole or in part, without prior written permission from Monica Kapoor, is strictly prohibited and may result in legal action. This website is intended solely for informational and entertainment purposes. All rights are reserved by Monica Kapoor. Use of this website's content for commercial purposes or any other unauthorized use is strictly prohibited. For inquiries or permissions, please contact: Monica Kapoor divineblessingsladyoffortune@gmail.com" />
     </footer>
   );
 }

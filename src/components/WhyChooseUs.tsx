@@ -39,7 +39,7 @@ const astrologyImages = [
 
 function WhyChooseUs() {
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="w-full mx-auto">
       <div className={philosopher.className}>
         <StickyScroll 
           content={astrologyContent} 

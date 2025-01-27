@@ -63,7 +63,7 @@ const Yantras = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      <h1 className={`${philosopher.className} text-lg md:text-6xl text-center font-bold mb-20 text-[#6a1818]`}>
+      <h1 className={`${philosopher.className} text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]`}>
         Yantras
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">

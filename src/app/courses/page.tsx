@@ -54,7 +54,7 @@ function page() {
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
       <h1
         className={cn(
-          'text-lg md:text-6xl text-center font-bold mb-12 text-[#6a1818]',
+          'text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]',
           headingFont.className
         )}
       >
