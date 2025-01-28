@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Modal from "@/components/Modal";
 
 import { Philosopher, Open_Sans } from "next/font/google";
 import { cn } from "@/utils/cn";
@@ -25,6 +24,7 @@ const services = [
     description:
       "Discover nature's treasures - handpicked precious and semi-precious stones that combine timeless beauty with powerful energetic properties.",
     image: "/images/Stones.jpg",
+    link: "/products/stones",
   },
   {
     title: "Bracelets",
@@ -50,16 +50,6 @@ const services = [
 ];
 
 const ProductsPage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
       <h1
@@ -101,34 +91,15 @@ const ProductsPage = () => {
               >
                 {service.description}
               </p>
-              {service.title === "Stones" ? (
-                <button
-                  onClick={openModal}
-                  className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300"
-                >
+              <Link href={service.link || "#"}>
+                <button className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300">
                   View More
                 </button>
-              ) : (
-                <Link href={service.link || "#"}>
-                  <button className="mt-6 w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition duration-300">
-                    View More
-                  </button>
-                </Link>
-              )}
+              </Link>
             </div>
           </div>
         ))}
       </div>
-
-      {isModalOpen && (
-        <Modal
-          isOpen={isModalOpen}
-          onClose={closeModal}
-          image="/images/Stones.jpg"
-          title="Stones"
-          description="Note: In the stones section, please note that we intentionally haven't uploaded stones for sale on our website. There's a purpose behind this. If anyone wants to purchase stones specific to their birth date and Janam Rashi, they can personally connect with us through email."
-        />
-      )}
     </div>
   );
 };
