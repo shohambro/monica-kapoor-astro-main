@@ -32,7 +32,7 @@ const specialties: Specialty[] = [
     title: "Divine Chandan Attar",
     description:
       "Astrology suggests that applying sandalwood perfume daily can mitigate the adverse influences of Rahu, particularly during its Mahadasha. Sandalwood, intrinsically linked to the Moon, promotes emotional equilibrium and mental tranquility. This fragrant remedy not only alleviates stress but also fosters a sense of peace and inner harmony.",
-    image: "/images/ChandanAttar.jpg",
+    image: "/images/ChandanAttar.png",
   },
 ];
 
@@ -78,7 +78,7 @@ const OurSpecialty = () => {
               className="w-full h-64 object-cover rounded-md"
             />
             <div className="p-6">
-              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-8 text-[#6a1818]`}>
+              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-2 text-[#6a1818]`}>
                 {specialty.title}
               </h2>
               <button

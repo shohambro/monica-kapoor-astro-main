@@ -80,6 +80,7 @@ function Navbar({ className }: { className?: string }) {
                   <HoveredLink href="/products/stones">Stones</HoveredLink>
                   <HoveredLink href="/products/bracelets">Bracelets</HoveredLink>
                   <HoveredLink href="/products/yantras">Yantras</HoveredLink>
+                  <HoveredLink href="/products/specialty">Our Specialty</HoveredLink>
                 </div>
               </MenuItem>
             </Link>

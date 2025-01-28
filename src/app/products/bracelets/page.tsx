@@ -164,7 +164,7 @@ const Bracelets = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-6 flex-grow">
-              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-8 text-[#6a1818]`}>
+              <h2 className={`${philosopher.className} text-lg md:text-2xl text-center font-bold mb-2 text-[#6a1818]`}>
                 {bracelet.title}
               </h2>
             </div>
@@ -172,7 +172,7 @@ const Bracelets = () => {
               onClick={() => openModal(bracelet)}
               className="w-full py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-b-2xl"
             >
-              Buy Now
+              View
             </button>
           </div>
         ))}

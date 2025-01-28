@@ -41,7 +41,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white hover:underline">
+                <Link href="/courses" className="hover:text-white hover:underline">
                   Services
                 </Link>
               </li>
@@ -51,7 +51,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white hover:underline">
+                <Link href="/appointments" className="hover:text-white hover:underline">
                   Contact Us
                 </Link>
               </li>
@@ -76,15 +76,15 @@ function Footer() {
         <div className="mt-12 text-center">
           <h3 className={cn("text-xl font-semibold mb-4", headingFont.className)}>Follow Me</h3>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-[#6a1818] hover:text-white hover:underline">Facebook</a>
-            <a href="#" className="text-[#6a1818] hover:text-white hover:underline">LinkedIn</a>
-            <a href="#" className="text-[#6a1818] hover:text-white hover:underline">YouTube</a>
-            <a href="#" className="text-[#6a1818] hover:text-white hover:underline">Instagram</a>
+            <a href="https://www.facebook.com/muaonica?mibextid=ZbWKwL" className="text-[#6a1818] hover:text-white hover:underline">Facebook</a>
+            <a href="https://www.linkedin.com/in/kapoor-m-95a9b2143?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-[#6a1818] hover:text-white hover:underline">LinkedIn</a>
+            <a href="https://youtube.com/@healwithmotheruniverse?si=aQVygQBEdGe06DqY" className="text-[#6a1818] hover:text-white hover:underline">YouTube</a>
+            <a href="https://www.instagram.com/divinemonica369/profilecard/?igsh=OHV6NjBvMGhua2I3" className="text-[#6a1818] hover:text-white hover:underline">Instagram</a>
           </div>
         </div>
         <div className="mt-4 text-center border-t border-neutral-300 pt-6">
           <p
-            className={cn("text-sm lg:text-lg", paragraphFont.className)}
+            className={cn("text-sm hover:text-white hover:underline lg:text-lg", paragraphFont.className)}
             onClick={handleModalOpen} // Open the modal on click
             style={{ cursor: "pointer" }}
           >

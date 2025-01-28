@@ -44,7 +44,7 @@ const services = [
     title: "Our Specialty",
     description:
       "Pure, alcohol-free botanical perfumes crafted through traditional distillation, capturing the sacred essence of flowers, herbs, and precious woods.",
-    image: "/images/ChandanAttar.jpg",
+    image: "/images/ChandanAttar.png",
     link: "/products/specialty",
   },
 ];
@@ -134,7 +134,7 @@ const ProductsPage = () => {
           onClose={closeModal}
           image="/images/Stones.jpg"
           title="Stones" // Pass string directly
-          description="Discover nature's treasures - handpicked precious and semi-precious stones that combine timeless beauty with powerful energetic properties. Explore their spiritual benefits and elevate your energy levels today!" // Pass string directly
+          description="Note: In the stones section, please note that we intentionally haven't uploaded stones for sale on our website. There's a purpose behind this. If anyone wants to purchase stones specific to their birth date and Janam Rashi, they can personally connect with us through email." // Pass string directly
         />
       )}
     </div>
