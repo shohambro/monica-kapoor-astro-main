@@ -62,7 +62,6 @@ const ProductsPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
-      {/* Main Heading */}
       <h1
         className={cn(
           "text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]",
@@ -72,8 +71,7 @@ const ProductsPage = () => {
         Products Available
       </h1>
 
-      {/* Product Cards */}
-      <div className="flex flex-wrap p-5 justify-center gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 justify-items-center">
         {services.map((service, index) => (
           <div
             key={index}
@@ -87,7 +85,6 @@ const ProductsPage = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
-              {/* Product Title */}
               <h2
                 className={cn(
                   "text-2xl font-bold text-[#6a1818] dark:text-white",
@@ -96,8 +93,6 @@ const ProductsPage = () => {
               >
                 {service.title}
               </h2>
-
-              {/* Product Description */}
               <p
                 className={cn(
                   "mt-4 text-[#6a1818] dark:text-gray-300 text-sm",
@@ -106,8 +101,6 @@ const ProductsPage = () => {
               >
                 {service.description}
               </p>
-
-              {/* Buttons */}
               {service.title === "Stones" ? (
                 <button
                   onClick={openModal}
@@ -127,14 +120,13 @@ const ProductsPage = () => {
         ))}
       </div>
 
-      {/* Modal */}
       {isModalOpen && (
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
           image="/images/Stones.jpg"
-          title="Stones" // Pass string directly
-          description="Note: In the stones section, please note that we intentionally haven't uploaded stones for sale on our website. There's a purpose behind this. If anyone wants to purchase stones specific to their birth date and Janam Rashi, they can personally connect with us through email." // Pass string directly
+          title="Stones"
+          description="Note: In the stones section, please note that we intentionally haven't uploaded stones for sale on our website. There's a purpose behind this. If anyone wants to purchase stones specific to their birth date and Janam Rashi, they can personally connect with us through email."
         />
       )}
     </div>

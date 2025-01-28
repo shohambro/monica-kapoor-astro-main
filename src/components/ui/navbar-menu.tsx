@@ -3,6 +3,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Philosopher } from "next/font/google";
+import { cn } from "@/utils/cn";
+
+const headingFont = Philosopher({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 const transition = {
   type: "spring",
@@ -28,7 +35,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-green-600  hover:text-green-300 font-semibold" // Text is now white
+        className={cn("cursor-pointer text-green-600 text-lg hover:text-green-300 font-bold", headingFont.className)}
       >
         {item}
       </motion.p>

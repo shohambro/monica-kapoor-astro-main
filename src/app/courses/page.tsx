@@ -1,51 +1,51 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import React from 'react';
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import Link from "next/link";
 
-import { Philosopher, Open_Sans } from 'next/font/google';
-import { cn } from '@/utils/cn';
+import { Philosopher, Open_Sans } from "next/font/google";
+import { cn } from "@/utils/cn";
 
 const headingFont = Philosopher({
-  subsets: ['latin'],
-  weight: ['700'],
+  subsets: ["latin"],
+  weight: ["700"],
 });
 
 const paragraphFont = Open_Sans({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['italic'],
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["italic"],
 });
 
 function page() {
   const services = [
     {
-      title: 'Numerology',
+      title: "Numerology",
       description:
-        'Unlock the mysteries of numbers and their influence on your life with our expert numerology service.',
-      image: '/images/Numerology.jpg',
+        "Unlock the mysteries of numbers and their influence on your life with our expert numerology service.",
+      image: "/images/Numerology.jpg",
       price: 999,
     },
     {
-      title: 'Tarot Reading',
+      title: "Tarot Reading",
       description:
-        'Discover insights into your past, present, and future with our personalized tarot readings.',
-      image: '/images/Tarot.jpg',
+        "Discover insights into your past, present, and future with our personalized tarot readings.",
+      image: "/images/Tarot.jpg",
       price: 999,
     },
     {
-      title: 'Psychic Reading',
+      title: "Psychic Reading",
       description:
-        'Gain clarity and psychic guidance to navigate life challenges and unlock your inner potential.',
-      image: '/images/Psychic1.jpg',
+        "Gain clarity and psychic guidance to navigate life challenges and unlock your inner potential.",
+      image: "/images/Psychic1.jpg",
       price: 999,
     },
     {
-      title: 'Magic Spells / Pujas',
+      title: "Magic Spells / Pujas",
       description:
-        'Experience powerful rituals and transformative spells tailored to bring peace and prosperity into your life.',
-      image: '/images/MagicSpells.jpg',
+        "Experience powerful rituals and transformative spells tailored to bring peace and prosperity into your life.",
+      image: "/images/MagicSpells.jpg",
       price: 1455,
     },
   ];
@@ -54,13 +54,13 @@ function page() {
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 py-12 pt-36">
       <h1
         className={cn(
-          'text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]',
+          "text-4xl md:text-6xl text-center font-bold mb-12 text-[#6a1818]",
           headingFont.className
         )}
       >
         Our Services
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-5 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-5 justify-items-center">
         {services.map((service, index) => (
           <div
             key={index}
@@ -77,7 +77,7 @@ function page() {
               <div>
                 <h2
                   className={cn(
-                    'text-2xl font-bold text-gray-800 dark:text-white',
+                    "text-2xl font-bold text-gray-800 dark:text-white",
                     headingFont.className
                   )}
                 >
@@ -85,7 +85,7 @@ function page() {
                 </h2>
                 <p
                   className={cn(
-                    'mt-4 text-gray-600 dark:text-gray-300 text-sm',
+                    "mt-4 text-gray-600 dark:text-gray-300 text-sm",
                     paragraphFont.className
                   )}
                 >
