@@ -29,7 +29,8 @@ const AppointmentPage: React.FC = () => {
     preferredSlot: "morning",
     preferredDate: "",
     preferredTime: "",
-    modeOfConsultation: "online"
+    modeOfConsultation: "online",
+    mobileNumber: "",
   };
 
   const {
@@ -114,6 +115,20 @@ const AppointmentPage: React.FC = () => {
             </select>
             {errors.gender && (
               <p className="text-xs text-red-500">{errors.gender.message}</p>
+            )}
+          </div>
+
+               {/* Mobile Number */}
+               <div>
+            <label className="block text-sm font-medium text-black">Mobile Number</label>
+            <input
+              {...register("mobileNumber")}
+              type="tel"
+              className="w-full border text-black border-gray-300 rounded-lg p-2"
+              placeholder="Enter your mobile number"
+            />
+            {errors.mobileNumber && (
+              <p className="text-xs text-red-500">{errors.mobileNumber.message}</p>
             )}
           </div>
 

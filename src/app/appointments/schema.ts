@@ -50,6 +50,11 @@ export const formSchema = z.object({
   modeOfConsultation: z.enum(["online", "offline"], {
     message: "Please select a valid consultation mode",
   }),
+  mobileNumber: z
+    .string()
+    .min(1, "Mobile number is required")
+    .regex(/^[0-9]{10}$/, "Invalid mobile number format. Must be 10 digits."),
 });
+
 
 export type FormData = z.infer<typeof formSchema>;

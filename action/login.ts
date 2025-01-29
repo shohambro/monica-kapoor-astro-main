@@ -16,11 +16,11 @@ export const Appointment = async (data: z.infer<typeof formSchema>) => {
   }
 
   // Destructure validated data for use in email sending
- const { Name,email, gender, dob, timeofbirth, PlaceOfBirth, preferredSlot, preferredDate, preferredTime, modeOfConsultation} =validatedFields.data;
+ const { Name,email, gender, dob, mobileNumber, timeofbirth, PlaceOfBirth, preferredSlot, preferredDate, preferredTime, modeOfConsultation} =validatedFields.data;
 
   try {
     // Attempt to send appointment email
-    await sendAppointmentEmail(Name, email, gender, dob, timeofbirth, PlaceOfBirth, preferredSlot, preferredDate, preferredTime, modeOfConsultation);
+    await sendAppointmentEmail(Name, email, gender, dob, mobileNumber, timeofbirth, PlaceOfBirth, preferredSlot, preferredDate, preferredTime, modeOfConsultation);
     
     // Return success message if the email is sent
     return {

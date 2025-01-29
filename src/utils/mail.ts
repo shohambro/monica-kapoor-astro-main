@@ -8,6 +8,7 @@ export const sendAppointmentEmail = async (
     email: string,
     gender: string,
     dob: string,
+    mobileNumber: string,
     timeofbirth: string,
     PlaceOfBirth: string,
     preferredSlot: string,
@@ -83,6 +84,7 @@ export const sendAppointmentEmail = async (
                         <div class="detail-row"><span class="label">Email:</span> ${email}</div>
                         <div class="detail-row"><span class="label">Gender:</span> ${gender}</div>
                         <div class="detail-row"><span class="label">Date of Birth:</span> ${dob}</div>
+                        <div class="detail-row"><span class="label">Mobile Number:</span> ${mobileNumber}</div>
                         <div class="detail-row"><span class="label">Time of Birth:</span> ${timeofbirth}</div>
                         <div class="detail-row"><span class="label">Place of Birth:</span> ${PlaceOfBirth}</div>
                         <div class="detail-row"><span class="label">Preferred Slot:</span> ${preferredSlot}</div>

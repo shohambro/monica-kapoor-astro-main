@@ -42,8 +42,8 @@ const Photos = () => {
         Glimpses
       </h1>
       <p className="text-lg text-center text-[#6a1818] italic font-semibold mb-10">
-        Cosmic conversations captured in still frames. Astrology, numerology,
-        and the mysteries they hold. Glimpses into the stars and the numbers
+        Cosmic conversations captured in still frames. <br/> Astrology, numerology,
+        and the mysteries they hold.<br/> Glimpses into the stars and the numbers
         that guide us.
       </p>
       <div className="flex flex-col items-center">
