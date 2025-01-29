@@ -22,10 +22,14 @@ const AppointmentPage: React.FC = () => {
   const defaultValues: FormData = {
     Name: "",
     email: "",
-    gender: "male", // provide a default value from the enum
+    gender: "male",
     dob: "",
     timeofbirth: "",
     PlaceOfBirth: "",
+    preferredSlot: "morning",
+    preferredDate: "",
+    preferredTime: "",
+    modeOfConsultation: "online"
   };
 
   const {
@@ -156,6 +160,71 @@ const AppointmentPage: React.FC = () => {
               <p className="text-xs text-red-500">
                 {errors.PlaceOfBirth.message}
               </p>
+            )}
+          </div>
+
+          {/* Preferred Slot */}
+          <div>
+            <label className="block text-sm font-medium text-black">
+              Preferred Slot
+            </label>
+            <select
+              {...register("preferredSlot")}
+              className="w-full border text-black border-gray-300 rounded-lg p-2"
+            >
+              <option value="morning">Morning</option>
+              <option value="day">Day</option>
+              <option value="evening">Evening</option>
+            </select>
+            {errors.preferredSlot && (
+              <p className="text-xs text-red-500">{errors.preferredSlot.message}</p>
+            )}
+          </div>
+
+          {/* Preferred Date */}
+          <div>
+            <label className="block text-sm font-medium text-black">
+              Preferred Date
+            </label>
+            <input
+              {...register("preferredDate")}
+              type="date"
+              className="w-full border text-black border-gray-300 rounded-lg p-2"
+            />
+            {errors.preferredDate && (
+              <p className="text-xs text-red-500">{errors.preferredDate.message}</p>
+            )}
+          </div>
+
+          {/* Preferred Time */}
+          <div>
+            <label className="block text-sm font-medium text-black">
+              Preferred Time
+            </label>
+            <input
+              {...register("preferredTime")}
+              type="time"
+              className="w-full border text-black border-gray-300 rounded-lg p-2"
+            />
+            {errors.preferredTime && (
+              <p className="text-xs text-red-500">{errors.preferredTime.message}</p>
+            )}
+          </div>
+
+          {/* Mode of Consultation */}
+          <div>
+            <label className="block text-sm font-medium text-black">
+              Mode of Consultation
+            </label>
+            <select
+              {...register("modeOfConsultation")}
+              className="w-full border text-black border-gray-300 rounded-lg p-2"
+            >
+              <option value="online">Online</option>
+              <option value="offline">Offline</option>
+            </select>
+            {errors.modeOfConsultation && (
+              <p className="text-xs text-red-500">{errors.modeOfConsultation.message}</p>
             )}
           </div>
 

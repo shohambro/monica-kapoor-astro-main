@@ -83,14 +83,34 @@ function Footer() {
           </div>
         </div>
         <div className="mt-4 text-center border-t border-neutral-300 pt-6">
-          <p
-            className={cn("text-sm hover:text-white hover:underline lg:text-lg", paragraphFont.className)}
-            onClick={handleModalOpen} // Open the modal on click
-            style={{ cursor: "pointer" }}
-          >
-            © {new Date().getFullYear()} Divine Monica. All rights reserved.
-          </p>
-        </div>
+  <p
+    className={cn("text-sm hover:text-white hover:underline lg:text-lg", paragraphFont.className)}
+    onClick={handleModalOpen}
+    style={{ cursor: "pointer" }}
+  >
+    © {new Date().getFullYear()} Divine Monica. All rights reserved.
+  </p>
+  <p className={cn("text-sm lg:text-lg", paragraphFont.className)}>
+    Developed By -{" "}
+    <a 
+      href="https://www.linkedin.com/in/shoham-brojobasi-9526b6201/" 
+      className="hover:text-white hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Shoham Brojobasi
+    </a>{" "}
+    and{" "}
+    <a 
+      href="https://www.linkedin.com/in/saksham-kumar-b930b2220/" 
+      className="hover:text-white hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Saksham Kumar
+    </a>
+  </p>
+</div>
       </div>
 
       {/* Modal component */}

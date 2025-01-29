@@ -28,7 +28,7 @@ const paragraphFont = Open_Sans({
 
 function YouTubeVideos() {
   return (
-    <div className="relative min-h-screen bg-white flex flex-col items-center justify-center p-8 space-y-6">
+    <div className="relative min-h-screen bg-gradient-to-br from-yellow-400 to-orange-500 flex flex-col items-center justify-center p-8 space-y-6">
       <h2
         className={cn(
           "text-4xl lg:text-5xl font-bold text-[#6a1818] text-center mb-8 mt-8",
@@ -157,7 +157,7 @@ function YouTubeVideos() {
       </div>
       <div className="mt-6">
         <Link href={"/featured-videos"}>
-          <button className="text-sm w-auto px-6 py-3 mt-4 bg-orange-500 hover:bg-orange-600 text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
+          <button className="text-sm w-auto px-6 py-3 mt-4 bg-orange-500 hover:bg-white text-white hover:text-green-300 font-semibold rounded-lg transition duration-300">
             View All
           </button>
         </Link>

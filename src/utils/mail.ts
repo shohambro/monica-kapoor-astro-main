@@ -1,4 +1,4 @@
-"use server"
+"use server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -9,11 +9,15 @@ export const sendAppointmentEmail = async (
     gender: string,
     dob: string,
     timeofbirth: string,
-    PlaceOfBirth: string
+    PlaceOfBirth: string,
+    preferredSlot: string,
+    preferredDate: string,
+    preferredTime: string,
+    modeOfConsultation: string
 ) => {
     await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: "shohambrojobasi@gmail.com",
+        to: "divineblessingsladyoffortune@gmail.com",
         subject: "New Appointment Confirmation",
         html: `
             <!DOCTYPE html>
@@ -75,24 +79,16 @@ export const sendAppointmentEmail = async (
                     <div class="content">
                         <p>Thank you for scheduling your appointment. Here are your details:</p>
                         
-                        <div class="detail-row">
-                            <span class="label">Name:</span> ${Name}
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Email:</span> ${email}
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Gender:</span> ${gender}
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Date of Birth:</span> ${dob}
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Time of Birth:</span> ${timeofbirth}
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Place of Birth:</span> ${PlaceOfBirth}
-                        </div>
+                        <div class="detail-row"><span class="label">Name:</span> ${Name}</div>
+                        <div class="detail-row"><span class="label">Email:</span> ${email}</div>
+                        <div class="detail-row"><span class="label">Gender:</span> ${gender}</div>
+                        <div class="detail-row"><span class="label">Date of Birth:</span> ${dob}</div>
+                        <div class="detail-row"><span class="label">Time of Birth:</span> ${timeofbirth}</div>
+                        <div class="detail-row"><span class="label">Place of Birth:</span> ${PlaceOfBirth}</div>
+                        <div class="detail-row"><span class="label">Preferred Slot:</span> ${preferredSlot}</div>
+                        <div class="detail-row"><span class="label">Preferred Date:</span> ${preferredDate}</div>
+                        <div class="detail-row"><span class="label">Preferred Time:</span> ${preferredTime}</div>
+                        <div class="detail-row"><span class="label">Mode of Consultation:</span> ${modeOfConsultation}</div>
 
                         <p>If you need to make any changes to your appointment or have any questions, please don't hesitate to contact us.</p>
                     </div>
@@ -105,4 +101,4 @@ export const sendAppointmentEmail = async (
             </html>
         `
     });
-}
+};
