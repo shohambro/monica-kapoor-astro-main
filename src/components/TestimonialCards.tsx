@@ -59,7 +59,7 @@ const musicSchoolTestimonials = [
     image: "/images/Msoni.jpg",
   },
   {
-    quote: "Amazing person. Gives very accurate personal readings about oneself. She helps you understand your problem and guides you in the right direction. She is not one of those who does it for money, she is very helpful and is a wonderful person. I strongly recommend you to visit her once, if you have any problems, she cant give you the solution but surely will enlighten the path for you.",
+    quote: "Amazing person. Gives very accurate personal readings about oneself. She helps you understand your problem and guides you in the right direction. She is wonderful and doesn't do it for money. I strongly recommend you to visit her once, if you have any problems, she surely will enlighten the path for you.",
     name: "Nirmal Singh",
     title: "",
     image: "/images/Nirmal.jpg",
