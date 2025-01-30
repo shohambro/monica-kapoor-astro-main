@@ -27,7 +27,7 @@ const musicSchoolTestimonials = [
   },
   {
     quote: "Always my go-to mentor and perfect guidance 🫶🏻 blessed to have her🙏🏻🧿",
-    name: "Uttara",
+    name: "Anonymous",
     title: "From-Astrotalk",
   },
   {
