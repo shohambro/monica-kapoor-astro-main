@@ -61,8 +61,8 @@ const musicSchoolTestimonials = [
   },
   {
     quote: "Amazing person. Gives very accurate personal readings about oneself. She helps understand your problems and guides you in the right direction. She is wonderful and doesn't do it for money. I strongly recommend you to visit her once, if you have any problems, she surely will enlighten the path for you.",
-    name: "Nirmal Singh Ji Maharaj",
-    title: "Guru Ji",
+    name: "Nirmal Singh Ji",
+    title: "",
     image: "/images/GuruJiPic.jpg",
   },
   {
