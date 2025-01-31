@@ -74,43 +74,41 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-          className="w-[350px] md:w-[450px] h-[450px] flex flex-col justify-between items-center relative rounded-2xl shadow-lg border-slate-700 px-8 py-6"
+          className="w-[350px] md:w-[450px] h-[500px] flex flex-col justify-between items-center relative rounded-2xl shadow-lg border-slate-700 px-8 py-6"
           style={{
             background: "white",
           }}
             key={idx}
           >
             <blockquote className="flex flex-col justify-between items-center text-center h-full">
-  {/* Image Section (Takes More Space) */}
+  {/* Image Section */}
   {item.image && (
     <Image 
       src={item.image} 
       alt={item.name} 
-      width={200} 
-      height={200} 
+      width={170} 
+      height={170} 
       className="rounded-full object-cover mx-auto mb-4"
     />
   )}
 
-  {/* Quote Section (Fixed Height, No Truncation) */}
-  <div className="flex-grow px-4 min-h-[80px] max-h-[120px] overflow-hidden text-ellipsis whitespace-normal break-words">
-    <span className="relative z-20 text-sm leading-[1.6] text-[#6a1818] font-normal">
+  {/* Quote Section (Text Resizes to Fit) */}
+  <div className="flex-grow px-4 overflow-hidden text-ellipsis border-b border-[#6a1818] ">
+    <span className="relative z-20 h-[300px] text-xs sm:text-sm md:text-base text-wrap text-[#6a1818] font-normal">
       {item.quote}
     </span>
   </div>
 
-  {/* Name & Title (Always at Bottom) */}
+  {/* Name & Title (Fixed at Bottom) */}
   <div className="w-full pt-4">
-    <span className="block text-sm leading-[1.6] text-[#6a1818] font-bold">
+    <span className="block text-xs sm:text-sm md:text-base leading-[1.6] text-[#6a1818] font-bold">
       {item.name}
     </span>
-    <span className="block text-sm leading-[1.6] text-[#6a1818] font-normal">
+    <span className="block text-xs sm:text-sm md:text-base leading-[1.6] text-[#6a1818] font-normal">
       {item.title}
     </span>
   </div>
 </blockquote>
-
-
           </li>
         ))}
       </ul>
