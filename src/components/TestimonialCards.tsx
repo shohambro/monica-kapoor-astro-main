@@ -96,7 +96,7 @@ const musicSchoolTestimonials = [
     image: "/images/Anonymous.jpg",
   },
   {
-    quote: "Amazing person, gives very accurate personal readings about oneself. She helps you understand your problem and guides you in the right direction. She is not one of those who does it for money, she is very helpful and is a wonderful person. I strongly recommend you to visit her once, if you have any problems, she cant give you the solution but surely will enlighten the path for you.. It surely helps.",
+    quote: "Wow Monica😊. The intention of my experience was all about gaining clarity and insight into dear family members only. Monica is truly gifted, kind, and motivated words when conversations warrant. The experience was enjoyable. Monica was able to tell us things that really impacted our lives. Thank you again.",
     name: "Anjali Khanna",
     title: "",
     image: "/images/Anjali.jpg",
