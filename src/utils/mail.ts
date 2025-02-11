@@ -18,7 +18,7 @@ export const sendAppointmentEmail = async (
 ) => {
     await resend.emails.send({
         from: "onboarding@resend.dev",
-        to: "divineblessingsladyoffortune@gmail.com",
+        to: "mkapoor369@gmail.com",
         subject: "New Appointment Confirmation",
         html: `
             <!DOCTYPE html>

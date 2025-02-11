@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "react-datepicker/dist/react-datepicker.css";
 import { Appointment } from "../../../action/login";
+import { sendAppointmentEmail } from "@/utils/mail";
 import PricingModal from "@/components/PricingModal";
 import { formSchema, FormData } from "@/app/appointments/schema";
 
@@ -50,6 +51,25 @@ const AppointmentPage: React.FC = () => {
       const response = await Appointment(data);
 
       if (response.success) {
+        try {
+          await sendAppointmentEmail(
+            data.Name,
+            data.email,
+            data.gender,
+            data.dob,
+            data.mobileNumber,
+            data.timeofbirth,
+            data.PlaceOfBirth,
+            data.preferredSlot,
+            data.preferredDate,
+            data.preferredTime,
+            data.modeOfConsultation
+          );
+          console.log("Email sent successfully");
+        } catch (emailError) {
+          console.error("Email sending failed:", emailError);
+        }
+        
         setSuccess(true);
         console.log("Success:", response.success);
         reset(defaultValues);
@@ -118,8 +138,8 @@ const AppointmentPage: React.FC = () => {
             )}
           </div>
 
-               {/* Mobile Number */}
-               <div>
+          {/* Mobile Number */}
+          <div>
             <label className="block text-sm font-medium text-black">Mobile Number</label>
             <input
               {...register("mobileNumber")}

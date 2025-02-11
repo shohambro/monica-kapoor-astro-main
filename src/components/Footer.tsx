@@ -58,20 +58,27 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className={cn("text-xl font-semibold mb-4", headingFont.className)}>Contact</h3>
-            <p className={cn(paragraphFont.className)}>
-              For inquiries, appointments, or more information,<br /> reach out at:
-            </p>
-            <ul className="mt-4 text-sm space-y-2">
-              <li>
-                Email:{" "}
-                <a href="mailto:divineblessingsladyoffortune@gmail.com" className="hover:text-white hover:underline">
-                  divineblessingsladyoffortune@gmail.com
-                </a>
-              </li>
-              <li>Delhi, India</li>
-            </ul>
-          </div>
+  <h3 className={cn("text-xl font-semibold mb-4", headingFont.className)}>Contact</h3>
+  <p className={cn(paragraphFont.className)}>
+    For inquiries, appointments, or more information,<br /> reach out at:
+  </p>
+  <ul className="mt-4 text-sm space-y-2">
+    <li>
+      Email:{" "}
+      <a href="mailto:mkapoor369@gmail.com" className="hover:text-white hover:underline">
+        mkapoor369@gmail.com
+      </a>
+    </li>
+    <li>
+      Phone:{" "}
+      <a href="tel:+919873113829" className="hover:text-white hover:underline">
+        +91 98731 13829
+      </a>
+    </li>
+    <li>Delhi, India</li>
+  </ul>
+</div>
+
         </div>
         <div className="mt-12 text-center">
           <h3 className={cn("text-xl font-semibold mb-4", headingFont.className)}>Follow Me</h3>
