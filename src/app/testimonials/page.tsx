@@ -148,10 +148,54 @@ const testimonials = [
     title: "From-Astrotalk",
     image: "/images/Anonymous.jpg",
   },
+
+
+
+  {
+    quote:
+      "Very helpful and accurate guidance along with remedies for both my career and marital life. Would recommend her for anyone looking for guidance and support.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
+  {
+    quote:
+      "ma'am you are really amazing. thanks a lot for your guidance. And had a beautiful session. Thank you so much ma'am.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
+  {
+    quote:
+      "you are such very kind person mam you feel me positive and confident. Thank you so much ma'am.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
+  {
+    quote:
+      "Thank you ma'am, all the predictions are correct, and very helful. My all problems solved thanks.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
+  {
+    quote:
+      "She is in an exceptional astrologer and healer... Will highly recommend to go to her if you need help.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
+  {
+    quote:
+      "I just wanted to say how much I loved your reading and remedies- you are very wise, kind and helpful. Thanks ma'am.",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
+  },
   
 ];
 
-// Separate the first testimonial (Guru Ji) from the rest
 const [featuredTestimonial, ...otherTestimonials] = testimonials;
 
 function Testimonials() {

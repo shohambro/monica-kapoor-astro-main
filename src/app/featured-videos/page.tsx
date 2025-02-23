@@ -70,50 +70,72 @@ function FeaturedVideosPage() {
         </div>
       </div>
 
-        {/* Two Side-by-Side Cards */}
-        <div className="flex flex-wrap justify-center gap-6 mb-12">
-        {/* Card 1 */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
-          <Image
-            src="/images/YT8.jpg" // Replace with the actual image for Card 1
-            alt="Featured Video 1"
-            width={720}
-            height={400}
-            className="w-full h-64 object-cover"
-          />
-          <div className="p-6 text-center">
-            <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
-              Secrets for 2025 Success | Manifest Money, Love Marriage & Growth in 2025 | @newyear
-            </h2>
-            <Link href="https://www.youtube.com/watch?v=JZf7OEhYltg">
-              <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
-                Watch on YouTube
-              </button>
-            </Link>
-          </div>
-        </div>
+      <div className="flex flex-wrap justify-center gap-6 mb-12">
+  {/* Card 1 */}
+  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-md transform hover:scale-105 transition-all duration-300">
+    <Image
+      src="/images/YT8.jpg"
+      alt="Featured Video 1"
+      width={720}
+      height={400}
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6 text-center">
+      <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
+        Secrets for 2025 Success | Manifest Money, Love Marriage & Growth in 2025 | Manifest With Bijay
+      </h2>
+      <Link href="https://www.youtube.com/watch?v=JZf7OEhYltg">
+        <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
+          Watch on YouTube
+        </button>
+      </Link>
+    </div>
+  </div>
 
-        {/* Card 2 */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-lg transform hover:scale-105 transition-all duration-300">
-          <Image
-            src="/images/PodcastH2H.png" // Replace with the actual image for Card 2
-            alt="Featured Video 2"
-            width={720}
-            height={400}
-            className="w-full h-64 object-cover"
-          />
-          <div className="p-6 text-center">
-            <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
-              🌟 Astrology and Numerology : All Secrets Revealed Ft Monica Kapoor | H2H Conversations
-            </h2>
-            <Link href="https://www.youtube.com/watch?v=7922yuQ2GTY">
-              <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
-                Watch on YouTube
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
+  {/* Card 2 */}
+  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-md transform hover:scale-105 transition-all duration-300">
+    <Image
+      src="/images/PodcastH2H.png" 
+      alt="Featured Video 2"
+      width={720}
+      height={400}
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6 text-center">
+      <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
+        🌟 Astrology and Numerology : All Secrets Revealed Ft Monica Kapoor | H2H Conversations
+      </h2>
+      <Link href="https://www.youtube.com/watch?v=7922yuQ2GTY">
+        <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
+          Watch on YouTube
+        </button>
+      </Link>
+    </div>
+  </div>
+
+  {/* Card 3 */}
+  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden w-full max-w-md transform hover:scale-105 transition-all duration-300">
+    <Image
+      src="/images/Podcast3.jpg" 
+      alt="Featured Video 2"
+      width={720}
+      height={400}
+      className="w-full h-64 object-cover"
+    />
+    <div className="p-6 text-center">
+      <h2 className={`${philosopher.className} text-3xl font-bold text-gray-800 dark:text-white mb-4`}>
+      MIND-BLOWING Mahashivratri Secrets Revealed | Full Puja Method & Remedies
+      </h2>
+      <Link href="https://www.youtube.com/watch?v=q_EP-7H_5yE">
+        <button className="py-2 px-6 bg-orange-500 hover:bg-red-600 text-white font-semibold rounded-lg transition duration-300">
+          Watch on YouTube
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
+
+      
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
         {videos.map((video, index) => (
