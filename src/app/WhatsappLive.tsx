@@ -9,11 +9,7 @@ const WhatsappLive = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     useEffect(() => {
 
-/**
- * Toggles the visibility of the WhatsApp link element based on scroll position.
- * Adds the 'visible' class if the page is scrolled more than 100 pixels, 
- * otherwise removes it.
- */
+
 
         const handleScroll = () => {
             const whatsappLinkElement = document.querySelector('.whatsapp-link');
@@ -37,7 +33,6 @@ const WhatsappLive = () => {
             }
         };
         checkScrollVisibility();
-        // window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };

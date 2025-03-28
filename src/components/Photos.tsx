@@ -40,23 +40,21 @@ const Photos = () => {
       >
         Glimpses
       </h1>
-      <p className="text-lg text-center text-[#6a1818] italic font-semibold mb-10">
+      <p className="text-lg text-center text-[#6a1818] mb-10">
         Cosmic conversations captured in still frames. <br/> Astrology, numerology,
         and the mysteries they hold.<br/> Glimpses into the stars and the numbers
         that guide us.
       </p>
       <div className="flex flex-col items-center">
-        {/* Slideshow Container */}
         <div className="relative w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden mb-4">
           <Image
             src={images[currentSlide]}
             alt={`Slide ${currentSlide + 1}`}
-            width={320}
-            height={320}
+            width={300}
+            height={300}
             className="w-full h-full object-cover"
             priority
           />
-          {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2 shadow-md"

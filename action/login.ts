@@ -22,12 +22,10 @@ export const Appointment = async (data: z.infer<typeof formSchema>) => {
     // Attempt to send appointment email
     await sendAppointmentEmail(Name, email, gender, dob, mobileNumber, timeofbirth, PlaceOfBirth, preferredSlot, preferredDate, preferredTime, modeOfConsultation);
     
-    // Return success message if the email is sent
     return {
       success: 'Form submitted successfully',
     };
   } catch (err) {
-    // Catch any errors that occur while sending the email
     console.error("Error while sending appointment email:", err);
     return {
       error: 'Failed to send appointment email. Please try again later.',
