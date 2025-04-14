@@ -97,13 +97,13 @@ const musicSchoolTestimonials = [
   },
   {
     quote: "Wow Monica😊. The intention of my experience was all about gaining clarity and insight into dear family members only. Monica is truly gifted, kind, and motivated words when conversations warrant. The experience was enjoyable. Monica was able to tell us things that really impacted our lives. Thank you again.",
-    name: "Anjali Khanna",
+    name: "Anjali",
     title: "",
     image: "/images/Anjali.jpg",
   },
   {
     quote: "I recently had an incredible tarot reading with Monica. Her intuitive and no-nonsense approach provided me with valuable insights that will help me in the coming year. Her reading was precise, practical, and deeply resonant. I highly recommend her services, even for those new to tarot readings.",
-    name: "Gautam Khanna",
+    name: "Gautam",
     title: "",
     image: "/images/Gautam.jpg",
   },
