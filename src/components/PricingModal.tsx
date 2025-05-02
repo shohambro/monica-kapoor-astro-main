@@ -21,54 +21,46 @@ const PricingModal: React.FC<PricingModalProps> = ({
             >
               ✖
             </button>
-            <h3 className="text-xl font-bold text-[#6a1818] mb-4">Pricing - Voice Notes</h3>
-            <ul className="space-y-2">
-              <li className="text-black">
-                <span className="font-semibold">1 Question:</span> ₹555
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">2 Questions:</span> ₹777
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">3 Questions:</span> ₹999
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">4 Questions:</span> ₹1111
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">5 Questions:</span> ₹1313
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">6 Questions:</span> ₹1515
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">7 Questions:</span> ₹1717
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">8 Questions:</span> ₹1919
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">9 Questions:</span> ₹2121
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">10 Questions:</span> ₹2222
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">Unlimited Questions:</span> ₹3333
-              </li>
-            </ul>
             <h3 className="text-xl font-bold text-[#6a1818] mt-4 mb-4">Pricing - Voice Call</h3>
             <ul>
-              <li className="text-black">
-                <span className="font-semibold">30 Minutes:</span> ₹3333
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">1 Hour:</span> ₹4444
-              </li>
-              <li className="text-black">
-                <span className="font-semibold">2 Hours:</span> ₹5555
-              </li>
-            </ul>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Angel Guidance:</span> ₹199/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Divine Guidance:</span> ₹199/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Results Guidance:</span> ₹199/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Reunion:</span> ₹599/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Job Guidance:</span> ₹599/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Marriage Guidance:</span> ₹599/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Ex Partner Come Back:</span> ₹599/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">15 Minutes:</span> ₹663/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">30 Minutes:</span> ₹999/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">60 Minutes:</span> ₹4460/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Name Correction:</span> ₹4100/-
+  </li>
+  <li className="text-[#6a1818]">
+    <span className="font-semibold">Overall Session:</span> ₹5550/-
+  </li>
+</ul>
+
           </div>
         </div>
       
