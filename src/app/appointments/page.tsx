@@ -287,12 +287,12 @@ const AppointmentPage: React.FC = () => {
           )}
         </form>
       </div>
-      <button 
+      {/* <button 
         onClick={openModal} 
         className="mt-6 px-3 py-2 bg-white hover:bg-green-300 text-orange-500 font-semibold rounded-lg transition duration-300"
       >
         View Pricing
-      </button>
+      </button> */}
       {isModalOpen && <PricingModal onClose={closeModal} />}
     </div>
   );
