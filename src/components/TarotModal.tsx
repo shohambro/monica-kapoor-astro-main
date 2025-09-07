@@ -16,19 +16,16 @@ const TarotModal: React.FC<TarotModalProps> = ({ onClose, onRegister }) => {
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 59, seconds: 59 });
   const [studentCount] = useState(Math.floor(Math.random() * 50) + 100);
 
-  // Rotating taglines for A/B testing
   const taglines = [
     "Unlock the Mysteries of Tarot with Divine Guidance",
     "Transform Your Spiritual Journey Through Sacred Tarot Wisdom",
     "Discover Your Path with Ancient Tarot Knowledge"
   ];
 
-  // Auto-trigger modal after delay or exit intent (one-time per session)
   useEffect(() => {
     if (hasBeenShown) return;
 
-    // Auto-trigger after 5-10 seconds (randomized)
-    const delay = Math.floor(Math.random() * 5000) + 5000;
+    const delay = 2000;
     const timer = setTimeout(() => {
       if (!hasBeenShown) {
         setIsVisible(true);
