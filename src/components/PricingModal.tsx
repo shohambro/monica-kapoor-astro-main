@@ -21,45 +21,40 @@ const PricingModal: React.FC<PricingModalProps> = ({
             >
               ✖
             </button>
-            <h3 className="text-xl font-bold text-[#6a1818] mt-4 mb-4">Pricing - Voice Call</h3>
-            <ul>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Angel Guidance:</span> ₹199/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Divine Guidance:</span> ₹199/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Results Guidance:</span> ₹199/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Reunion:</span> ₹599/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Job Guidance:</span> ₹599/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Marriage Guidance:</span> ₹599/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Ex Partner Come Back:</span> ₹599/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">15 Minutes:</span> ₹663/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">30 Minutes:</span> ₹999/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">60 Minutes:</span> ₹4460/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Name Correction:</span> ₹4100/-
-  </li>
-  <li className="text-[#6a1818]">
-    <span className="font-semibold">Overall Session:</span> ₹5550/-
-  </li>
-</ul>
+            <h3 className="text-xl font-bold text-[#6a1818] mt-4 mb-4 text-center">Consultation Structure</h3>
+            
+            <div className="mb-4">
+              <h4 className="font-bold text-[#6a1818] mb-2 text-center">🔹 Question Wise 🔹</h4>
+              <ul>
+                <li className="text-black text-center">
+                  <span className="font-semibold">Question-Wise Consultation:</span> ₹1,650 (Up To 3 Questions)
+                </li>
+                <li className="text-black text-center">
+                  <span className="font-semibold">Package Of 5 Questions:</span> ₹3,300 (Valid 1 Month)
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="font-bold text-[#6a1818] mb-2 text-center">🔹 Hourly Format 🔹</h4>
+              <ul>
+                <li className="text-black text-center">
+                  <span className="font-semibold">30 Minutes Session:</span> ₹2,400
+                </li>
+                <li className="text-black text-center">
+                  <span className="font-semibold">60 Minutes Session:</span> ₹3,600
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="font-bold text-[#6a1818] mb-2 text-center">🔹 Long-Term Regular Clients 🔹</h4>
+              <ul>
+                <li className="text-black text-center">
+                  <span className="font-semibold">Monthly Package:</span> ₹4,500 (Up To 2 Sessions/Month + WhatsApp Support)
+                </li>
+              </ul>
+            </div>
 
           </div>
         </div>
