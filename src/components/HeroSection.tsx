@@ -44,7 +44,7 @@ function HeroSection() {
         <div className="relative z-10 px-6 py-12">
           <h1
             className={cn(
-              "text-3xl font-bold bg-clip-text text-transparent text-yellow-400 bg-white mb-4",
+              "text-3xl font-bold text-yellow-400 mb-4",
               headingFont.className
             )}
           >
@@ -111,7 +111,7 @@ function HeroSection() {
           {/* Heading */}
           <h1
             className={cn(
-              "mt-20 md:mt-20 text-5xl md:text-7xl text-nowrap font-bold bg-clip-text text-transparent text-yellow-400 bg-white",
+              "mt-20 md:mt-20 text-5xl md:text-7xl text-nowrap font-bold text-yellow-400",
               headingFont.className
             )}
           >
@@ -121,7 +121,7 @@ function HeroSection() {
           {/* Subheading */}
           <p
             className={cn(
-              "mt-8 font-normal text-center text-nowrap text-base md:text-lg text-yellow-400 max-w-lg",
+              "mt-8 font-bold text-center text-nowrap text-base md:text-lg text-yellow-400 max-w-lg",
               subheadingFont.className
             )}
           >
@@ -132,7 +132,7 @@ function HeroSection() {
           {/* Paragraph */}
           <p
             className={cn(
-              "mt-4 font-normal text-start text-nowrap text-base md:text-sm text-[white] max-w-lg",
+              "mt-4 font-normal text-start text-nowrap text-base md:text-sm text-white max-w-lg",
               paragraphFont.className
             )}
           >
@@ -145,7 +145,7 @@ function HeroSection() {
           </p>
           <p
             className={cn(
-              "mt-4 font-normal text-start text-nowrap text-base md:text-sm text-[white] max-w-lg",
+              "mt-4 font-normal text-start text-nowrap text-base md:text-sm text-white max-w-lg",
               paragraphFont.className
             )}
           >

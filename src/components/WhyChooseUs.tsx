@@ -5,6 +5,7 @@ import { Philosopher } from 'next/font/google';
 const philosopher = Philosopher({
   subsets: ['latin'],
   weight: ['700'],
+  display: 'swap', // Add this for better font loading
 });
 
 const astrologyContent = [
@@ -39,13 +40,11 @@ const astrologyImages = [
 
 function WhyChooseUs() {
   return (
-    <div className="w-full mx-auto">
-      <div className={philosopher.className}>
-        <StickyScroll 
-          content={astrologyContent} 
-          images={astrologyImages}
-        />
-      </div>
+    <div className={`w-full mx-auto ${philosopher.className}`}>
+      <StickyScroll 
+        content={astrologyContent} 
+        images={astrologyImages}
+      />
     </div>
   );
 }
