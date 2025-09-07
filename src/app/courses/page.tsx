@@ -25,28 +25,28 @@ function page() {
       description:
         "Unlock the mysteries of numbers and their influence on your life with our expert numerology service.",
       image: "/images/Numerology.jpg",
-      price: 999,
+      price: 1500,
     },
     {
       title: "Tarot Reading",
       description:
         "Discover insights into your past, present, and future with our personalized tarot readings.",
       image: "/images/Tarot.jpg",
-      price: 999,
+      price: 1500,
     },
     {
       title: "Psychic Reading",
       description:
         "Gain clarity and psychic guidance to navigate life challenges and unlock your inner potential.",
       image: "/images/Psychic1.jpg",
-      price: 999,
+      price: 1500,
     },
     {
       title: "Magic Spells / Pujas",
       description:
         "Experience powerful rituals and transformative spells tailored to bring peace and prosperity into your life.",
       image: "/images/MagicSpells.jpg",
-      price: 1455,
+      price: 1500,
     },
   ];
 
