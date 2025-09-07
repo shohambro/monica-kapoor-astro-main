@@ -161,9 +161,9 @@ const TarotModal: React.FC<TarotModalProps> = ({ onClose, onRegister }) => {
 
             {/* Supporting Text */}
             <p className="text-sm md:text-base text-gray-700 mb-6 font-sans leading-relaxed">
-              Guided by Guruji's blessings, start your Tarot journey today. 
-              Classes open for students worldwide.
-            </p>
+  Guided by Guruji&apos;s blessings, start your Tarot journey today. 
+  Classes open for students worldwide.
+</p>
 
             {/* Urgency - Countdown */}
             <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-3 mb-6 border border-yellow-200">
@@ -208,8 +208,8 @@ const TarotModal: React.FC<TarotModalProps> = ({ onClose, onRegister }) => {
             {/* Trust Badge */}
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-xs text-gray-500">
-                🙏 Blessed by Guruji's Divine Guidance | 100% Authentic Spiritual Teaching
-              </p>
+  🙏 Blessed by Guruji&apos;s Divine Guidance | 100% Authentic Spiritual Teaching
+</p>
             </div>
           </div>
         </div>
