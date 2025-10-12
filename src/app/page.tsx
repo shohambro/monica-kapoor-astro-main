@@ -31,10 +31,10 @@ export default function Home() {
       <Photos />
       <Instructors />
       <Footer />
-      <TarotModal 
+      {/* <TarotModal 
         onClose={handleModalClose}
         onRegister={handleRegister}
-      />
+      /> */}
     </main>
   );
 }
