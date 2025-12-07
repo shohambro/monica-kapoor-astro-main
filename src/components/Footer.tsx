@@ -71,8 +71,8 @@ function Footer() {
     </li>
     <li>
       Phone:{" "}
-      <a href="tel:+919873113829" className="hover:text-white hover:underline">
-        +91 98731 13829
+      <a href="tel:+91 96676 33811" className="hover:text-white hover:underline">
+        +91 96676 33811
       </a>
     </li>
     <li>Delhi, India</li>

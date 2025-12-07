@@ -39,7 +39,7 @@ function YouTubeVideos() {
         Featured Podcasts And Clips
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-6xl">
         {/* Short 1 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <a
@@ -119,6 +119,45 @@ function YouTubeVideos() {
         </div>
 
         {/* Short 3 */}
+        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+          <a
+            href="https://www.youtube.com/watch?si=i0uDYv3uqypjuxfh&v=S550A5zt4JA&feature=youtu.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Image
+              src={photo8}
+              alt="Short 2 Thumbnail"
+              width={800}
+              height={400}
+              className="w-full h-48 object-right"
+            />
+          </a>
+          <div className="p-4">
+            <h3
+              className={cn(
+                "text-md font-semibold text-gray-800",
+                subheadingFont.className
+              )}
+            >
+              Decode your destiny - Astrology x Numerology - With Trade Commissioner Ankitt Jain
+            </h3>
+            <a
+              href="https://www.youtube.com/@TheKnickKnackShow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "text-gray-600 mt-2 hover:text-green-300 transition-colors duration-200",
+                paragraphFont.className
+              )}
+            >
+              TheKnickKnackShow
+            </a>
+          </div>
+        </div>
+
+           {/* Short 3 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <a
             href="https://www.youtube.com/watch?si=i0uDYv3uqypjuxfh&v=S550A5zt4JA&feature=youtu.be"

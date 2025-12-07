@@ -9,6 +9,7 @@ import Photos from "@/components/Photos";
 import MusicSchoolTestimonials from "@/components/TestimonialCards";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import UpcomingWebinars from "@/components/UpcomingWebinars";
+import OnlineTarotClasses from "@/components/OnlineTarotClasses";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
       <Photos />
       <Instructors />
       <UpcomingWebinars />
+      <OnlineTarotClasses />
       <Footer />
     </main>
   );

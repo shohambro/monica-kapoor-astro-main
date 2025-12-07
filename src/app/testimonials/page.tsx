@@ -259,7 +259,7 @@ function Testimonials() {
         Testimonials from India and Worldwide Clients
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         {/* Card 1 */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-between">
           {/* Large Image */}
@@ -276,7 +276,7 @@ function Testimonials() {
           {/* Text */}
           <p
             className={cn(
-              "italic text-gray-700 text-center mb-6",
+              "italic text-sm text-gray-700 text-center mb-6",
               paragraphFont.className
             )}
           >
@@ -320,7 +320,7 @@ function Testimonials() {
           {/* Text */}
           <p
             className={cn(
-              "italic text-gray-700 text-center mb-6",
+              "italic text-sm text-gray-700 text-center mb-6",
               paragraphFont.className
             )}
           >
@@ -344,6 +344,50 @@ function Testimonials() {
             )}
           >
             Daisuke, from Japan
+          </h3>
+        </div>
+
+        {/* Card 2 */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-between">
+          {/* Large Image */}
+          <div className="w-full flex justify-center mb-6">
+            <Image
+              src="/images/nkjapan.jpeg"
+              alt="Client"
+              width={500}
+              height={350}
+              className="rounded-lg object-cover w-full max-w-[95%] h-[280px]"
+            />
+          </div>
+
+          {/* Text */}
+          <p
+            className={cn(
+              "italic text-sm text-gray-700 text-center mb-6",
+              paragraphFont.className
+            )}
+          >
+            Connecting with Monica Kapoor in India through Instagram was a
+            turning point for me—her uplifting energy, insightful videos, and
+            podcasts gave me a feeling of a divine soul connection. After seeing
+            positive feedback on her website, I took a consultation, and her
+            guidance became a light in my life, showing me the path towards
+            success and growth. I am grateful to the universe for guiding me to
+            Monica at just the right time, proving that distance does not matter
+            when someone helps you find direction and hope. If you wish to
+            experience divine magic and transformation, you can also connect
+            with Monica Kapoor and feel the miracles that the universe brings
+            through her guidance.
+          </p>
+
+          {/* Name */}
+          <h3
+            className={cn(
+              "text-xl font-semibold text-[#6a1818] text-center",
+              headingFont.className
+            )}
+          >
+            NK, from Japan
           </h3>
         </div>
       </div>

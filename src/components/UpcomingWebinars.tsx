@@ -26,12 +26,12 @@ const font_3 = Montserrat({
 
 function BookAppointmentForm() {
   return (
-    <div className="h-[50rem] w-full bg-white flex items-center justify-center px-4">
-      <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-8 text-center">
+    <div className="min-h-[50rem] w-full bg-white flex items-center justify-center px-4 py-8 md:py-12">
+      <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg p-6 md:p-8 text-center">
         {/* Heading */}
         <h2
           className={cn(
-            "text-4xl text-[#6a1818] text-center mb-6",
+            "text-3xl md:text-4xl text-[#6a1818] text-center mb-4 md:mb-6",
             font.className
           )}
         >
@@ -39,8 +39,8 @@ function BookAppointmentForm() {
         </h2>
 
         {/* Image Section - Two Square Images */}
-        <div className="w-full flex flex-col items-center gap-6 mb-6">
-          <div className="w-32 h-32 bg-gray-200 rounded-lg overflow-hidden">
+        <div className="w-full flex flex-col items-center gap-4 md:gap-6 mb-4 md:mb-6">
+          <div className="w-28 h-28 md:w-32 md:h-32 bg-gray-200 rounded-lg overflow-hidden">
             <Image
               src="/images/astrotalk.jpeg"
               alt="Image 1"
@@ -50,11 +50,11 @@ function BookAppointmentForm() {
             />
           </div>
 
-          <div className="w-64 h-32 bg-gray-200 rounded-lg overflow-hidden">
+          <div className="w-56 h-28 md:w-64 md:h-32 bg-gray-200 rounded-lg overflow-hidden">
             <Image
               src="/images/atprofile.jpeg"
               alt="Image 2"
-              width={128}
+              width={256}
               height={128}
               className="w-full h-full object-cover"
             />
@@ -62,7 +62,7 @@ function BookAppointmentForm() {
         </div>
 
         {/* Paragraph Section */}
-        <p className="text-[#6a1818] italic text-lg leading-relaxed mb-6">
+        <p className="text-[#6a1818] italic text-base md:text-lg leading-relaxed mb-4 md:mb-6">
           She also has an active professional profile on Astrotalk where you can
           connect directly for personalized guidance and spiritual
           consultations. Through this platform, you can easily book sessions,
