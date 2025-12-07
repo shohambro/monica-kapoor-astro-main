@@ -13,13 +13,16 @@ const headingFont = Philosopher({
 const Photos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
-    "/images/photo1.jpg",
-    "/images/photo3.jpg",
-    "/images/photo4.jpg",
+    "/images/photo6.jpeg",
+    "/images/photo7.jpeg",
+    "/images/photo8.jpeg",
     "/images/HeroSmallBack.jpg",
     "/images/Podcast1.jpg",
     "/images/Scroll4.jpg",
     "/images/YT3.jpg",
+    "/images/photo1.jpg",
+    "/images/photo3.jpg",
+    "/images/photo4.jpg",
   ];
 
   const nextSlide = () => {
@@ -40,10 +43,10 @@ const Photos = () => {
       >
         Glimpses
       </h1>
-      <p className="text-lg text-center text-[#6a1818] mb-10">
-        Cosmic conversations captured in still frames. <br/> Astrology, numerology,
-        and the mysteries they hold.<br/> Glimpses into the stars and the numbers
-        that guide us.
+      <p className="text-md text-center text-[#6a1818] mb-10">
+        Cosmic conversations captured in still frames. <br /> Astrology,
+        numerology, and the mysteries they hold.
+        <br /> Glimpses into the stars and the numbers that guide us.
       </p>
       <div className="flex flex-col items-center">
         <div className="relative w-80 h-80 bg-white rounded-xl shadow-lg overflow-hidden mb-4">

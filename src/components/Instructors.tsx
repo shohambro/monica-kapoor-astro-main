@@ -5,6 +5,7 @@ import Image from "next/image";
 import PodcastH2H from "../../public/images/PodcastH2H.png";
 import Shorts1 from "../../public/images/Shorts1.jpg";
 import Shorts2 from "../../public/images/Shorts2.jpg";
+import photo8 from "../../public/images/photo8.jpeg";
 import Link from "next/link";
 
 import { Philosopher, Open_Sans, Montserrat } from "next/font/google";
@@ -58,11 +59,12 @@ function YouTubeVideos() {
           <div className="p-4">
             <h3
               className={cn(
-                "text-xl font-semibold text-gray-800",
+                "text-md font-semibold text-gray-800",
                 subheadingFont.className
               )}
             >
-              🌟 Astrology and Numerology: All Secrets Revealed Ft. Monica Kapoor
+              🌟 Astrology and Numerology: All Secrets Revealed Ft. Monica
+              Kapoor
             </h3>
             <a
               href="https://www.youtube.com/@Manuudevaal-y3h"
@@ -96,7 +98,7 @@ function YouTubeVideos() {
           <div className="p-4">
             <h3
               className={cn(
-                "text-lg font-semibold text-gray-800",
+                "text-md font-semibold text-gray-800",
                 subheadingFont.className
               )}
             >
@@ -119,13 +121,13 @@ function YouTubeVideos() {
         {/* Short 3 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <a
-            href="https://youtube.com/shorts/YmwnS6Xyk7U?si=b9J_ELeMwOJk1pXa"
+            href="https://www.youtube.com/watch?si=i0uDYv3uqypjuxfh&v=S550A5zt4JA&feature=youtu.be"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
           >
             <Image
-              src={Shorts2}
+              src={photo8}
               alt="Short 2 Thumbnail"
               width={800}
               height={400}
@@ -135,14 +137,14 @@ function YouTubeVideos() {
           <div className="p-4">
             <h3
               className={cn(
-                "text-lg font-semibold text-gray-800",
+                "text-md font-semibold text-gray-800",
                 subheadingFont.className
               )}
             >
-              It is Never Too Late to Start Fresh 🌟
+              Decode your destiny - Astrology x Numerology - YouTube
             </h3>
             <a
-              href="https://www.youtube.com/@manifestwithbijay/featured"
+              href="https://www.youtube.com/@TheKnickKnackShow"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
@@ -150,7 +152,7 @@ function YouTubeVideos() {
                 paragraphFont.className
               )}
             >
-              manifestwithbijay
+              TheKnickKnackShow
             </a>
           </div>
         </div>

@@ -148,9 +148,6 @@ const testimonials = [
     title: "From-Astrotalk",
     image: "/images/Anonymous.jpg",
   },
-
-
-
   {
     quote:
       "Very helpful and accurate guidance along with remedies for both my career and marital life. Would recommend her for anyone looking for guidance and support.",
@@ -193,7 +190,6 @@ const testimonials = [
     title: "From-Astrotalk",
     image: "/images/Anonymous.jpg",
   },
-  
 ];
 
 const [featuredTestimonial, ...otherTestimonials] = testimonials;
@@ -253,6 +249,105 @@ function Testimonials() {
         </div>
       </div>
 
+      {/* NEW SECTION */}
+      <h2
+        className={cn(
+          "text-4xl text-[#6a1818] font-bold text-center mb-12",
+          headingFont.className
+        )}
+      >
+        Testimonials from India and Worldwide Clients
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        {/* Card 1 */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-between">
+          {/* Large Image */}
+          <div className="w-full flex justify-center mb-6">
+            <Image
+              src="/images/makireview.jpeg"
+              alt="Client"
+              width={500}
+              height={350}
+              className="rounded-lg object-cover w-full max-w-[95%] h-[280px]"
+            />
+          </div>
+
+          {/* Text */}
+          <p
+            className={cn(
+              "italic text-gray-700 text-center mb-6",
+              paragraphFont.className
+            )}
+          >
+            I had a wonderful consultation with Monica Kapoor 🌷 Her reading was
+            truly magical — every message felt so accurate and deeply connected,
+            just like a miracle! ✨ Her healing energy carries the power of a
+            true magician — bringing clarity, growth, and abundance to life. 🌿
+            I could feel my energy rising and my life path becoming brighter
+            after her guidance. If you are seeking direction or spiritual
+            balance, I truly recommend experiencing her consultation once.
+            Monica provides her intuitive guidance and healing sessions through
+            email for Japanese clients as well. 💌 心から感謝しています 💖
+            (Kokoro kara kansha shiteimasu – Grateful from my heart) Love &
+            Light.
+          </p>
+
+          {/* Name */}
+          <h3
+            className={cn(
+              "text-xl font-semibold text-[#6a1818] text-center",
+              headingFont.className
+            )}
+          >
+            Maki, from Japan
+          </h3>
+        </div>
+
+        {/* Card 2 */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 flex flex-col justify-between">
+          {/* Large Image */}
+          <div className="w-full flex justify-center mb-6">
+            <Image
+              src="/images/daisukereview.jpeg"
+              alt="Client"
+              width={500}
+              height={350}
+              className="rounded-lg object-cover w-full max-w-[95%] h-[280px]"
+            />
+          </div>
+
+          {/* Text */}
+          <p
+            className={cn(
+              "italic text-gray-700 text-center mb-6",
+              paragraphFont.className
+            )}
+          >
+            I recently had a consultation with Monica Kapoor 💫 Her guidance was
+            truly amazing — every message felt clear, accurate, and full of
+            warmth. It was like a beautiful miracle guiding me toward success
+            and abundance. 🌈 Monica’s healing energy touched my heart deeply;
+            she carries the calm strength of a true magician. After her session,
+            I felt peace, motivation, and new hope for my future. ✨ If you wish
+            to experience this beautiful energy, I sincerely recommend her
+            consultation. She also offers guidance through email for Japanese
+            clients. 💌 本当にありがとうございました🙏 (Hontō ni arigatō
+            gozaimashita – Thank you very much from my heart.)
+          </p>
+
+          {/* Name */}
+          <h3
+            className={cn(
+              "text-xl font-semibold text-[#6a1818] text-center",
+              headingFont.className
+            )}
+          >
+            Daisuke, from Japan
+          </h3>
+        </div>
+      </div>
+
       {/* Other Testimonials */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {otherTestimonials.map((testimonial, index) => (
@@ -297,11 +392,17 @@ function Testimonials() {
           </div>
         ))}
       </div>
+
       <div className="col-span-full text-center mt-8">
-    <p className={cn("text-2xl text-[#6a1818] font-semibold", headingFont.className)}>
-      And many more...
-    </p>
-  </div>
+        <p
+          className={cn(
+            "text-2xl text-[#6a1818] font-semibold",
+            headingFont.className
+          )}
+        >
+          And many more...
+        </p>
+      </div>
     </div>
   );
 }
