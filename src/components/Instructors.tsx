@@ -6,6 +6,7 @@ import PodcastH2H from "../../public/images/PodcastH2H.png";
 import Shorts1 from "../../public/images/Shorts1.jpg";
 import Shorts2 from "../../public/images/Shorts2.jpg";
 import photo8 from "../../public/images/photo8.jpeg";
+import adycted from "../../public/images/adycted.jpeg";
 import Link from "next/link";
 
 import { Philosopher, Open_Sans, Montserrat } from "next/font/google";
@@ -157,16 +158,16 @@ function YouTubeVideos() {
           </div>
         </div>
 
-           {/* Short 3 */}
+           {/* Short 4 */}
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <a
-            href="https://www.youtube.com/watch?si=i0uDYv3uqypjuxfh&v=S550A5zt4JA&feature=youtu.be"
+            href="https://youtu.be/Av9BwFXnbzo?si=riLazngytFQrMcZe"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
           >
             <Image
-              src={photo8}
+              src={adycted}
               alt="Short 2 Thumbnail"
               width={800}
               height={400}
@@ -180,10 +181,10 @@ function YouTubeVideos() {
                 subheadingFont.className
               )}
             >
-              Decode your destiny - Astrology x Numerology - With Trade Commissioner Ankitt Jain
+              2026 Predictions Revealed | Numerology, Sun Energy & Angel Numbers Explained with Monica Kapoor
             </h3>
             <a
-              href="https://www.youtube.com/@TheKnickKnackShow"
+              href="https://www.youtube.com/@TheAdyctedShow"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
@@ -191,7 +192,7 @@ function YouTubeVideos() {
                 paragraphFont.className
               )}
             >
-              TheKnickKnackShow
+              The Adycted Show
             </a>
           </div>
         </div>
