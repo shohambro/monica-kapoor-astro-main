@@ -32,9 +32,9 @@ const testimonials = [
   {
     quote:
       "I recently had an incredible tarot reading with Monica. Her intuitive and no-nonsense approach provided me with valuable insights that will help me in the coming year. Her reading was precise, practical, and deeply resonant. I highly recommend her services, even for those new to tarot readings.",
-    name: "Gautam",
-    title: "",
-    image: "/images/Gautam.jpg",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
   },
   {
     quote:
@@ -53,16 +53,16 @@ const testimonials = [
   {
     quote:
       "Hi Monica, Thanks for providing an insightful personal reading.  Your assessment was accurate and more importantly the remedial and spell measures were simple and very pertinent. I recommend this to others seeking a logical and pertinent reading.",
-    name: "Saloni",
-    title: "",
-    image: "/images/Saloni.jpg",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
   },
   {
     quote:
       "Monica Kapoor was more of a friend than a tarot reader. Despite being polite and wearing a smile always she judged quite a few things correctly. A person feels filled with confidence after her tarot sessions. Recommended!",
-    name: "Kajal",
-    title: "",
-    image: "/images/Kajal.jpg",
+    name: "Anonymous",
+    title: "From-Astrotalk",
+    image: "/images/Anonymous.jpg",
   },
   {
     quote:

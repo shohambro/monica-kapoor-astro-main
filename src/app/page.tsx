@@ -8,7 +8,7 @@ import Instructors from "@/components/Instructors";
 import Photos from "@/components/Photos";
 import MusicSchoolTestimonials from "@/components/TestimonialCards";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import TarotModal from "@/components/TarotModal";
+import UpcomingWebinars from "@/components/UpcomingWebinars";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -30,11 +30,8 @@ export default function Home() {
       <MusicSchoolTestimonials />
       <Photos />
       <Instructors />
+      <UpcomingWebinars />
       <Footer />
-      {/* <TarotModal 
-        onClose={handleModalClose}
-        onRegister={handleRegister}
-      /> */}
     </main>
   );
 }

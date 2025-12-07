@@ -141,7 +141,7 @@ function YouTubeVideos() {
                 subheadingFont.className
               )}
             >
-              Decode your destiny - Astrology x Numerology - YouTube
+              Decode your destiny - Astrology x Numerology - With Trade Commissioner Ankitt Jain
             </h3>
             <a
               href="https://www.youtube.com/@TheKnickKnackShow"

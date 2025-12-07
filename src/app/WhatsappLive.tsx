@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 const WhatsappLive = () => {
 
-    const whatsappNumber = "9873113829";
+    const whatsappNumber = "9667633811";
     const baseUrl="https://api.whatsapp.com/send/";
     const encodedMessage = `Hi!`;
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

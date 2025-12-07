@@ -30,18 +30,6 @@ const musicSchoolTestimonials = [
     image: "/images/Anonymous.jpg",
   },
   {
-    quote: "Hi Monica, Thanks for providing an insightful personal reading.  Your assessment was accurate and more importantly the remedial and spell measures were simple and very pertinent. I recommend this to others seeking a logical and pertinent reading.",
-    name: "Saloni",
-    title: "",
-    image: "/images/Saloni.jpg",
-  },
-  {
-    quote: "Monica Kapoor was more of a friend than a tarot reader. Despite being polite and wearing a smile always she judged quite a few things correctly. A person feels filled with confidence after her tarot sessions. Recommended!",
-    name: "Kajal",
-    title: "",
-    image: "/images/Kajal.jpg",
-  },
-  {
     quote: "I am so glad I sought astrological guidance from Monica regarding my career and life!  It provided valuable insights and left me feeling more confident and at peace about my future.",
     name: "Shoham Brojobasi",
     title: "",
@@ -100,12 +88,6 @@ const musicSchoolTestimonials = [
     name: "Anjali",
     title: "",
     image: "/images/Anjali.jpg",
-  },
-  {
-    quote: "I recently had an incredible tarot reading with Monica. Her intuitive and no-nonsense approach provided me with valuable insights that will help me in the coming year. Her reading was precise, practical, and deeply resonant. I highly recommend her services, even for those new to tarot readings.",
-    name: "Gautam",
-    title: "",
-    image: "/images/Gautam.jpg",
   },
 ];
 
