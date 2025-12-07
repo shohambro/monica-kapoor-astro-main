@@ -88,10 +88,10 @@ function OnlineTarotClasses() {
               font_2.className
             )}
           >
-            Awaken Your Mystic Power – Attract Abundance, Fame & Global
-            Mastery! "Mystic Divine Blessings Tarot Institute by Monica Kapoor"
+            Awaken Your Mystic Power – Attract Abundance, Fame &amp; Global
+            Mastery! &quot;Mystic Divine Blessings Tarot Institute by Monica Kapoor&quot;
             is officially launched! Start your professional and certified Tarot
-            Training today, guided by Guruji’s blessings. Dive deeper into
+            Training today, guided by Guruji&apos;s blessings. Dive deeper into
             intuition, healing, and Tarot Reading to unlock your potential. Step
             Into the World of Tarot – Start Your Learning Today! What You Will
             Receive: Divine Blessings + Professional Certification. Classes open
